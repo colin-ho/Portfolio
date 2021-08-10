@@ -23,7 +23,7 @@ const Sidebar = ({isOpen,toggle}) => {
                     </SidebarLink>
                 </SidebarMenu>
                 <SideBtnWrap>
-                    <SidebarRoute href={require('../../files/Colin Ho Resume.pdf').default} target="_blank">
+                    <SidebarRoute href="https://drive.google.com/uc?export=view&id=1QSVC4S5uB8WVSmjafAhAkpNMqnJFYZKQ" target="_blank">
                         View Resume
                     </SidebarRoute>
                 </SideBtnWrap>

@@ -2,7 +2,7 @@ import React from 'react'
 import { Button } from '../Extras/ButtonElement'
 import { InfoContainer,InfoWrapper,InfoRow,Column1,TextWrapper,TopLine,Heading,Subtitle,BtnWrap,Column2,ImgWrap,Img} from '../Extras/InfoElements.js'
 
-const InfoSection = ({destination,lightBg,id,imgStart,topLine,lightText,headline,darkText,description,buttonLabel,img,alt,primary,dark,dark2}) => {
+const InfoSection = ({destination,lightBg,id,imgStart,topLine,lightText,headline,darkText,description,buttonLabel,alt,primary,dark,dark2}) => {
 
     return (
         <> 
@@ -33,7 +33,7 @@ const InfoSection = ({destination,lightBg,id,imgStart,topLine,lightText,headline
                         </Column1>
                         <Column2>
                             <ImgWrap>
-                                <Img src={img} alt={alt}/>
+                                <Img src="https://drive.google.com/uc?export=view&id=1Fzlbh4FKtlqWXK3onr09Qw5akJHy1k7j" alt={alt}/>
                             </ImgWrap>
                         </Column2>
                     </InfoRow>

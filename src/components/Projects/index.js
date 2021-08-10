@@ -2,9 +2,6 @@ import React,{useState} from 'react'
 import {ProjectsContainer,ProjectsH1,ProjectsWrapper,ProjectsCard,ProjectsIcon,ProjectsH2,ProjectsP} from './ProjectsElements'
 import{BtnWrap} from '../../components/Extras/InfoElements'
 import {ProjectModal}from './ProjectModal.js'
-import Icon1 from '../../images/1.png'
-import Icon3 from '../../images/3.jpg'
-import Icon2 from '../../images/2.png'
 import { Button } from '../Extras/ButtonElement'
 import {FaAngleDoubleDown} from 'react-icons/fa'
 const Projects = () => {
@@ -23,17 +20,17 @@ const Projects = () => {
             <ProjectsH1>My Projects</ProjectsH1>
             <ProjectsWrapper>
                 <ProjectsCard onClick={()=> openModal(1)} style={{background:'#344966'}}>
-                    <ProjectsIcon src={Icon1}/>
+                    <ProjectsIcon src="https://drive.google.com/uc?export=view&id=1kT_-n9h8RE5oP-815yjjMfVLeBNqC2bG"/>
                     <ProjectsH2 style={{color:'#ededed'}}>Portfolio</ProjectsH2>
                     <ProjectsP style={{color:'#ededed'}}>Personal website using React and Flask</ProjectsP>
                 </ProjectsCard>
                 <ProjectsCard onClick={()=> openModal(2)} style={{background:'#ededed'}}>
-                    <ProjectsIcon src={Icon2}/>
+                    <ProjectsIcon src="https://drive.google.com/uc?export=view&id=1HGomef6h3qw0OvQ9_Ra4GkG145IwiRBk"/>
                     <ProjectsH2 >BetterRadio</ProjectsH2>
                     <ProjectsP >Recommendation focused web music player</ProjectsP>
                 </ProjectsCard>
                 <ProjectsCard onClick={()=> openModal(3)} style={{background:'#344966'}}>
-                    <ProjectsIcon src={Icon3}/>
+                    <ProjectsIcon src="https://drive.google.com/uc?export=view&id=1xK0s62BNeOPMnF5ZDFXVtJFTQPvjt_nW"/>
                     <ProjectsH2 style={{color:'#ededed'}}>Chatbot</ProjectsH2>
                     <ProjectsP style={{color:'#ededed'}}>Deep-learning powered chatbot</ProjectsP>
                 </ProjectsCard>
