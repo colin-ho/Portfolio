@@ -7,18 +7,14 @@
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",
     "react": "^17.0.2",
-    "react-animate-on-scroll": "^2.1.5",
-    "react-chat-popup": "^1.1.2",
-    "react-chat-window": "^1.2.1",
     "react-dom": "^17.0.2",
     "react-icons": "^4.2.0",
     "react-router-dom": "^5.2.0",
-    "react-scripts": "4.0.3",
-    "react-scroll": "^1.8.2",
-    "react-spring": "^9.0.0-rc.3",
+    "react-scripts": "^4.0.3",
+    "react-scroll": "^1.8.3",
+    "react-spring": "^9.2.4",
     "styled-components": "^5.3.0",
-    "use-is-in-viewport": "^1.0.9",
-    "web-vitals": "^1.1.2"
+    "use-is-in-viewport": "^1.0.9"
   },
   "scripts": {
     "start": "react-scripts start",

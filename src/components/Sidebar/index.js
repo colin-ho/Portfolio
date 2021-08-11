@@ -1,5 +1,6 @@
 import React from 'react'
 import {SidebarContainer,Icon,CloseIcon,SideBtnWrap,SidebarLink,SidebarRoute,SidebarWrapper,SidebarMenu} from './SidebarElements';
+import resume from '../../files/Colin Ho Resume.pdf'
 
 const Sidebar = ({isOpen,toggle}) => {
     return (
@@ -23,7 +24,7 @@ const Sidebar = ({isOpen,toggle}) => {
                     </SidebarLink>
                 </SidebarMenu>
                 <SideBtnWrap>
-                    <SidebarRoute href="https://drive.google.com/uc?export=view&id=1QSVC4S5uB8WVSmjafAhAkpNMqnJFYZKQ" target="_blank">
+                    <SidebarRoute href={resume} target="_blank">
                         View Resume
                     </SidebarRoute>
                 </SideBtnWrap>
