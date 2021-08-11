@@ -1,5 +1,5 @@
 import React,{useState,useEffect} from 'react'
-import Video from '../../videos/video.mp4'
+import Video from '../../videos/video.gif'
 import {HeroContainer,HeroBg,VideoBg,HeroContent,HeroH1,HeroP,HeroH2,HeroBtnWrapper,ArrowForward,ArrowRight} from './HeroElements'
 import{Button}from '../Extras/ButtonElement'
 const HeroSection = () => {
@@ -20,7 +20,7 @@ const HeroSection = () => {
     return (
         <HeroContainer id = 'home'>
             <HeroBg style={{ transform: `translateY(-${offsetY * 0.5}px)` }}>
-                <VideoBg autoPlay loop muted src={Video} type='video/mp4' />
+                <VideoBg src={Video} />
             </HeroBg>
             <HeroContent>
                 <HeroH1>Hi, I'm Colin.</HeroH1>

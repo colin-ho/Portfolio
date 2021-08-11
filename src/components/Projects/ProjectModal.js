@@ -2,9 +2,9 @@ import React,{useRef,useEffect,useCallback} from 'react'
 import {useSpring,animated} from 'react-spring'
 import styled from 'styled-components'
 import {MdClose} from 'react-icons/md'
-import Icon1 from '../../videos/1.mp4'
-import Icon2 from '../../videos/2.mp4'
-import Icon3 from '../../videos/1.mp4'
+import Icon1 from '../../videos/1.gif'
+import Icon2 from '../../videos/2.gif'
+import Icon3 from '../../videos/1.gif'
 
 const Background = styled.div`
     width:100%;
@@ -58,7 +58,7 @@ const ModalWrapper = styled.div`
     
 `
 
-const ModalImg = styled.video`
+const ModalImg = styled.img`
     padding:20px 0;
     margin-top:auto;
     margin-bottom: auto;
@@ -186,7 +186,7 @@ export const ProjectModal = ({showModal,setShowModal,data})=>{
         <Background ref = {modalRef} onClick={closeModal}>
             {matchMedia('only screen and (max-width: 768px)').matches ?
             <ModalWrapper showModal={showModal}>
-                <ModalImg src={img} autoPlay loop type='video/mp4'/>
+                <ModalImg src={img}/>
                 <ModalContent>
                     <h2>{title}</h2>
                     <p>{para}</p>
@@ -197,7 +197,7 @@ export const ProjectModal = ({showModal,setShowModal,data})=>{
             :
             <animated.div style={animation}>
                 <ModalWrapper showModal={showModal}>
-                    <ModalImg src={img} autoPlay loop type='video/mp4'/>
+                    <ModalImg src={img}/>
                     <ModalContent>
                         <h1>{title}</h1>
                         <p>{para}</p>

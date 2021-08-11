@@ -32,7 +32,7 @@ export const HeroBg = styled.div`
     margin-right: 50%;
 `;
 
-export const VideoBg = styled.video`
+export const VideoBg = styled.img`
     width:200%;
     min-width: 600px;
     height:150%;
