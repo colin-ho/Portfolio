@@ -33,7 +33,7 @@ const InfoSection = ({destination,lightBg,id,imgStart,topLine,lightText,headline
                         </Column1>
                         <Column2>
                             <ImgWrap>
-                                <Img src="https://drive.google.com/uc?export=view&id=1Fzlbh4FKtlqWXK3onr09Qw5akJHy1k7j" alt={alt}/>
+                                <Img src={"https://drive.google.com/uc?export=view&id=1Fzlbh4FKtlqWXK3onr09Qw5akJHy1k7j"} alt={alt}/>
                             </ImgWrap>
                         </Column2>
                     </InfoRow>
