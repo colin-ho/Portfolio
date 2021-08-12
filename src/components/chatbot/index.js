@@ -3,7 +3,6 @@ import './chatbotelements.js'
 import {Option,OptionArea, Icon,CloseIcon,PopCon,Chatcon,Chatbox,Header,MessageArea,Right,SpanLeft,SpanRight,Left,Footer,Input,Button,Pop,P,Open} from './chatbotelements'
 import {FaPaperPlane} from 'react-icons/fa'
 import {IoIosChatboxes} from 'react-icons/io'
-
 export const PopChat = ( props ) => {
 
   const [chatopen, setChatopen] = useState(false)
@@ -53,7 +52,7 @@ export const PopChat = ( props ) => {
     <>
     <Chatcon chatopen={chatopen}>
       <Chatbox>
-        <Header>Chat Support</Header>
+        <Header>Ask Colin </Header>
         <Icon onClick = {toggle}>
           <CloseIcon />
         </Icon>
@@ -67,17 +66,16 @@ export const PopChat = ( props ) => {
               ))
           }
           <OptionArea>
-            <Option onClick={e=>handle("Tell me about yourself")}>About</Option>
+            <Option onClick={e=>handle("Tell me about yourself")}>About Me</Option>
             <Option onClick={e=>handle("Share your academic qualifications")}>Education</Option>
             <Option onClick={e=>handle("Talk about your skills")}>Skills</Option>
             <Option onClick={e=>handle("What work experience do you have")}>Experience</Option>
-            <Option onClick={e=>handle("Show me your projects")}>Projects</Option>
-            <Option onClick={e=>handle("What is your contact")}>Contact</Option>
+            <Option onClick={e=>handle("What are your interests")}>Interests</Option>
           </OptionArea>
           <div ref={divRef} />
         </MessageArea>
         <Footer>
-          <Input placeholder="Type your message here..." value={text} onChange={e => setText(e.target.value)} onKeyPress={handleKeypress}/>
+          <Input placeholder="Ask a question about me..." value={text} onChange={e => setText(e.target.value)} onKeyPress={handleKeypress}/>
           <Button to="contact" onClick={handleClick}><FaPaperPlane/></Button>
         </Footer>
       </Chatbox>

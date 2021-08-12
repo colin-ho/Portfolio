@@ -13,7 +13,7 @@ from tensorflow.keras.preprocessing.sequence import pad_sequences
 lemmatizer = WordNetLemmatizer()
 data = json.loads(open('intents.json').read())
 
-tester = load_model('model-v3.h5')
+tester = load_model('model-v1.h5')
 tokenizer_t = joblib.load('tokenizer_t.pkl')
 vocab = joblib.load('vocab.pkl')
 mapper = joblib.load('mapper.pkl')
@@ -57,7 +57,7 @@ def get_pred(model,encoded_input):
     pred_dict.sort(key=lambda x: x[1], reverse=True)
     return pred_dict
 
-def get_response(intents_list, intents_json):
+def get_response(intents_list, intents_json,message):
     if not intents_list:
         return "Sorry, I cannot understand you"
     tag = intents_list[0][0]
@@ -66,15 +66,22 @@ def get_response(intents_list, intents_json):
     list_of_intents = intents_json['intents']
     for i in list_of_intents:
         if i['tag']==tag:
+            if i['tag']=="media":
+                if "github" in message:
+                    result = i['responses'][0]
+                    return result
+                elif "linked" in message:
+                    result = i['responses'][1]
+                    return result
             result = random.choice(i['responses'])
             break
     
-    return result
+    return result,tag
 
 def chat(message):
     df_input = get_text(message)
     df_input = remove_stop_words_for_input(tokenizer,df_input,'question')
     encoded_input = encode_input_text(tokenizer_t,df_input,'question')
     intents_list = get_pred(tester,encoded_input)
-    response = get_response(intents_list,data)
-    return response
+    response,tag = get_response(intents_list,data,message)
+    return response,tag

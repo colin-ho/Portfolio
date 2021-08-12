@@ -43,7 +43,7 @@ export const IconWrap = (lightBg) => {
         config:{
             duration:350
         },
-        opacity: isInViewport1 ? 1 : 1,
+        opacity: isInViewport1 ? 1 : 0,
         transform: isInViewport1? `translateX(0%)`:`translateX(-100%)`
     })
 

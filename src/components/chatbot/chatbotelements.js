@@ -135,7 +135,7 @@ export const Open = styled.button`
 
 export const OptionArea=styled.div`
   background-color: #eee;
-  padding: 0px 10px 10px 10px;
+  padding: 0px 10px 10px 0px;
   display: flex;
   flex-wrap:wrap;
   justify-content: flex-start;
@@ -145,7 +145,7 @@ export const Option = styled.button`
     border-radius:50px;
     background: #B4CDED;
     white-space: nowrap;
-    padding:10px;
+    padding:7px;
     margin:5px;
     color: #0D1821;
     font-size: 12px;

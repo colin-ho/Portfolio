@@ -14,7 +14,7 @@ app.config['MAIL_USE_TLS'] = False
 app.config['MAIL_USE_SSL'] = True
 mail = Mail(app)
 
-s = [['bot','Hello! Ask anything about me.'],['bot',"Type your question or select an option below."]]
+s = [['bot','Hello! This chatbot is programmed to answer professional questions about me.'],['bot',"Select an option below, or type in your question."]]
 
 @app.route("/", defaults={'path':''})
 def serve(path):
@@ -27,8 +27,14 @@ def get_message():
 @app.route('/input',methods=["POST"])
 def get_input():
     message=request.get_json()
-    response = ['bot',chat(message)]
-    return {'message':response}
+    data,tag=chat(message)
+    response = ['bot',data]
+    if tag == 'about':
+        follow = ['bot','Ask again for different answers!']
+        return {'message':[response,follow]}
+    else:
+        return {'message':response}
+    
 
 @app.route('/email',methods=["POST"])
 def receive_email():
