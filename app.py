@@ -32,6 +32,15 @@ def get_input():
     if tag == 'about':
         follow = ['bot','Ask again for different answers!']
         return {'message':[response,follow]}
+    elif tag == 'skills' or tag =='projects':
+        follow = [['bot','Would you like to see my projects?']]
+        return {'message':[response,follow]}
+    elif tag =='education' or tag =='experience':
+        follow = [['bot','Would you like to see my resume?']]
+        return {'message':[response,follow]}
+    elif tag =='contact':
+        follow = [['bot','Feel free to send me an email!']]
+        return {'message':[response,follow]}
     else:
         return {'message':response}
     

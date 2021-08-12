@@ -46,7 +46,7 @@
     "patterns": ["about me","tell me about yourself","I want to know more about you","give me information about you","tell me something about you","please share about yourself",
     "may i know more about you","could you share with me your personal information","i want the information on you","I'd like to learn more about you","I'd like to get to know you better",
     "I am interested in learning about you"],
-    "responses": ["I'm from Singapore","I'm a Comp Sci student at USC","I'm a gymaholic, I'd workout everyday if I could", "I love watching food videos, but I love cooking and eating food even more."]}
+    "responses": ["I'm from Singapore","I'm a Comp Sci student at USC","I love going to the gym!", "My favorite food is paella!"]}
     ,
     {"tag": "experience",
     "patterns": ["what are your work experiences","do you have work experience","i want to know your professional experience","explain your work life",

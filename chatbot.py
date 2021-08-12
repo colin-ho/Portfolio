@@ -52,7 +52,7 @@ def get_pred(model,encoded_input):
     pred = model.predict(encoded_input)
     pred_dict=[]
     for key in mapper.keys():
-        if pred[0][mapper[key]]>0.25:
+        if pred[0][mapper[key]]>0.3:
             pred_dict.append([key,pred[0][mapper[key]]])
     pred_dict.sort(key=lambda x: x[1], reverse=True)
     return pred_dict
@@ -69,10 +69,10 @@ def get_response(intents_list, intents_json,message):
             if i['tag']=="media":
                 if "github" in message:
                     result = i['responses'][0]
-                    return result
+                    return result,tag
                 elif "linked" in message:
                     result = i['responses'][1]
-                    return result
+                    return result,tag
             result = random.choice(i['responses'])
             break
     

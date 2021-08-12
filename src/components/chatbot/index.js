@@ -24,7 +24,13 @@ export const PopChat = ( props ) => {
 
   const deliver = (s1,s2)=>{
     get(s1);
-    get(s2);
+    if (s2[0]==='bot'){
+      get(s2);
+    } else{
+      get(s2[0])
+      get(s2[1])
+    }
+    
   }
   const handle = (input) =>{
     fetch("/input", {
@@ -34,7 +40,7 @@ export const PopChat = ( props ) => {
       },
       body: JSON.stringify(input)
     }).then(res => res.json()).then(data => {
-      deliver(['user',input],data.message);
+        deliver(['user',input],data.message);
       });
   }
   const handleKeypress = e => {
@@ -66,11 +72,11 @@ export const PopChat = ( props ) => {
               ))
           }
           <OptionArea>
-            <Option onClick={e=>handle("Tell me about yourself")}>About Me</Option>
-            <Option onClick={e=>handle("Share your academic qualifications")}>Education</Option>
-            <Option onClick={e=>handle("Talk about your skills")}>Skills</Option>
-            <Option onClick={e=>handle("What work experience do you have")}>Experience</Option>
-            <Option onClick={e=>handle("What are your interests")}>Interests</Option>
+            <Option onClick={e=>{handle("Tell me about yourself");setText("")}}>About Me</Option>
+            <Option onClick={e=>{handle("Share your academic qualifications");setText("")}}>Education</Option>
+            <Option onClick={e=>{handle("Talk about your skills");setText("")}}>Skills</Option>
+            <Option onClick={e=>{handle("What work experience do you have");setText("")}}>Experience</Option>
+            <Option onClick={e=>{handle("What are your interests");setText("")}}>Interests</Option>
           </OptionArea>
           <div ref={divRef} />
         </MessageArea>
