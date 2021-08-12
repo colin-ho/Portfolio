@@ -2,7 +2,7 @@ import React,{useRef,useEffect,useCallback} from 'react'
 import {useSpring,animated} from 'react-spring'
 import styled from 'styled-components'
 import {MdClose} from 'react-icons/md'
-import Icon1 from '../../videos/1.gif'
+import Icon1 from '../../videos/3.gif'
 import Icon2 from '../../videos/2.gif'
 import Icon3 from '../../videos/1.gif'
 
