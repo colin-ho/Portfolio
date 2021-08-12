@@ -31,18 +31,21 @@ def get_input():
     response = ['bot',data]
     if tag == 'about':
         follow = ['bot','Ask again for different answers!']
-        return {'message':[response,follow]}
-    elif tag == 'skills' or tag =='projects':
+        return {'message':[response,follow],'tag':tag}
+    elif tag == 'skills':
+        follow = ['bot','Would you like to see more?']
+        return {'message':[response,follow],'tag':tag}
+    elif tag =='projects':
         follow = ['bot','Would you like to see my projects?']
-        return {'message':[response,follow]}
+        return {'message':[response,follow],'tag':tag}
     elif tag =='education' or tag =='experience':
         follow = ['bot','Would you like to see my resume?']
-        return {'message':[response,follow]}
+        return {'message':[response,follow],'tag':tag}
     elif tag =='contact':
         follow = ['bot','Feel free to send me an email!']
-        return {'message':[response,follow]}
+        return {'message':[response,follow],'tag':tag}
     else:
-        return {'message':response}
+        return {'message':response,'tag':tag}
     
 
 @app.route('/email',methods=["POST"])

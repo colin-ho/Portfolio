@@ -19,6 +19,8 @@ export const PopChat = ( props ) => {
   const messages = props.message
 
   const [text, setText] = useState("");
+  const [question,setQuestion]=useState(false)
+  const [option,setOption]=useState('')
 
   const get = props.getMessage
 
@@ -29,8 +31,20 @@ export const PopChat = ( props ) => {
     } else{
       get(s2[0])
       get(s2[1])
+      if (s2[1][1][s2[1][1].length-1]==='?'){
+        setQuestion(true)
+      }
     }
     
+  }
+
+  const handleQuestion = (response) =>{
+    if (response){
+        get(['bot',option])
+    }
+    get(['bot','Okay! Can I help you with anything else?'])
+    setQuestion(false)
+    setText("");
   }
   const handle = (input) =>{
     fetch("/input", {
@@ -41,6 +55,7 @@ export const PopChat = ( props ) => {
       body: JSON.stringify(input)
     }).then(res => res.json()).then(data => {
         deliver(['user',input],data.message);
+        setOption(data.tag)
       });
   }
   const handleKeypress = e => {
@@ -72,11 +87,19 @@ export const PopChat = ( props ) => {
               ))
           }
           <OptionArea>
-            <Option onClick={e=>{handle("Tell me about yourself");setText("")}}>About Me</Option>
-            <Option onClick={e=>{handle("Share your academic qualifications");setText("")}}>Education</Option>
-            <Option onClick={e=>{handle("Talk about your skills");setText("")}}>Skills</Option>
-            <Option onClick={e=>{handle("What work experience do you have");setText("")}}>Experience</Option>
-            <Option onClick={e=>{handle("What are your interests");setText("")}}>Interests</Option>
+            {question ? 
+            <>
+              <Option onClick={()=>handleQuestion(true)}>Yes</Option>
+              <Option onClick={()=>handleQuestion(false)}>No</Option>
+            </>:
+            <>
+              <Option onClick={e=>{handle("Tell me about yourself");setText("")}}>About Me</Option>
+              <Option onClick={e=>{handle("Share your academic qualifications");setText("")}}>Education</Option>
+              <Option onClick={e=>{handle("Talk about your skills");setText("")}}>Skills</Option>
+              <Option onClick={e=>{handle("What work experience do you have");setText("")}}>Experience</Option>
+              <Option onClick={e=>{handle("What are your interests");setText("")}}>Interests</Option>
+            </>
+            }
           </OptionArea>
           <div ref={divRef} />
         </MessageArea>
