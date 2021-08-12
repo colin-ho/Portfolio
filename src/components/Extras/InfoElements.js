@@ -4,7 +4,7 @@ export const InfoContainer = styled.div`
     color:#ededed;
     background: ${({lightBg}) => (lightBg ? '#ededed':'#0D1821')};
     @media screen and (max-width: 768px){
-        padding:50px 0;
+        padding:70px 0;
     }
     position:relative;
     z-index:1;
@@ -54,7 +54,7 @@ export const Column2 = styled.div`
 export const TextWrapper = styled.div`
     max-width: 540px;
     padding-top:0;
-    padding-bottom:60px;
+    padding-bottom:0px;
 `;
 
 export const TopLine = styled.p`
@@ -106,15 +106,16 @@ export const BtnWrap = styled.div`
 export const ImgWrap = styled.div`
     max-width:555px;
     height:100%;
+    @media screen and (max-width:768px){
+        padding-top: 70px;    
+    }
     display:flex;
     justify-content: center;
 `;
 
 export const Img = styled.img`
     width: 70%;
-    @media screen and (max-width:768px){
-        width: 60%;
-    }
+    
     @media screen and (max-width:480px){
         width: 70%;
     }
@@ -150,6 +151,7 @@ export const IconWrap3= styled.div`
     justify-content: center;
     @media screen and (max-width:768px){
         margin-top:-50px;
+        padding-top: 70px;    
     }
     @media screen and (max-width:480px){
         margin-top:-50px;

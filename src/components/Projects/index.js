@@ -6,7 +6,7 @@ import { Button } from '../Extras/ButtonElement'
 import {FaAngleDoubleDown} from 'react-icons/fa'
 import img1 from '../../images/1.png'
 import img2 from '../../images/2.png'
-import img3 from '../../images/3.jpg'
+import img3 from '../../images/3.png'
 const Projects = () => {
     const [showModal,setShowModal]=useState(false);
     const [data,setData]=useState(0);

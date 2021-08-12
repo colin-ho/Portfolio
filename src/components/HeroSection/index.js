@@ -1,6 +1,6 @@
 import React,{useState,useEffect} from 'react'
-import Video from '../../videos/video.gif'
-import {HeroContainer,HeroBg,VideoBg,HeroContent,HeroH1,HeroP,HeroH2,HeroBtnWrapper,ArrowForward,ArrowRight} from './HeroElements'
+import background from '../../images/bg5.jpg'
+import {HeroContainer,HeroBg,Bg,HeroContent,HeroH1,HeroP,HeroH2,HeroBtnWrapper,ArrowForward,ArrowRight} from './HeroElements'
 import{Button}from '../Extras/ButtonElement'
 const HeroSection = () => {
     const [hover,setHover]= useState(false)
@@ -20,7 +20,7 @@ const HeroSection = () => {
     return (
         <HeroContainer id = 'home'>
             <HeroBg style={{ transform: `translateY(-${offsetY * 0.5}px)` }}>
-                <VideoBg src={Video} />
+                <Bg src={background} />
             </HeroBg>
             <HeroContent>
                 <HeroH1>Hi, I'm Colin.</HeroH1>

@@ -52,7 +52,7 @@ def get_pred(model,encoded_input):
     pred = model.predict(encoded_input)
     pred_dict=[]
     for key in mapper.keys():
-        if pred[0][mapper[key]]>0.3:
+        if pred[0][mapper[key]]>0.4:
             pred_dict.append([key,pred[0][mapper[key]]])
     pred_dict.sort(key=lambda x: x[1], reverse=True)
     return pred_dict

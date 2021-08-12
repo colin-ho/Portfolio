@@ -22,10 +22,10 @@ const InfoSection = ({destination,lightBg,id,imgStart,topLine,lightText,headline
                                 {description}
                             </Subtitle>
                             <Subtitle darkText={darkText}>
-                                I am a driven and competitive individual who loves solving problems and creating solutions. There's never a moment where I'm not working on a project that challenges me.
+                                Driven and competitive, I naturally love solving problems and creating solutions. There's never a moment where I'm not working on a project that challenges me.
                             </Subtitle>
                             <Subtitle darkText={darkText}>
-                                When I'm not working, you can find me eating up some delicious food or getting a good workout at the gym.
+                                When I'm not working, you can find me trying new and delicious foods, or getting a good workout at the gym.
                             </Subtitle>
                             <BtnWrap>
                                 <Button to={destination} smooth={true} spy={true} exact="true" offset={-80} primary={primary ? 1:0} dark = {dark ? 1:0} dark2={dark2 ? 1:0}>{buttonLabel}</Button>
