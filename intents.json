@@ -28,7 +28,7 @@
     "patterns": ["skills","what skills do you have","tell me about your skills","what is your tech stack","what languages are you proficient in","what are your techinical capabilities","share with me your coding skills",
     "what is your programming expertise","which programming languages are you good at","what kind of developer are you","what do you specialise in","i want to know your coding knowledge","what technological skills do you have"
     ,"which frameworks are you knowledgeable in","what are your strengths","where do your talents lie in","what are the things you are good at"],
-    "responses": ["I'm proficient in Python,C++,Javascript, and variety of frameworks.","Some of my skills are being a great problem solver and critical thinker."]}
+    "responses": ["I'm proficient in Python,C++,Javascript, and a whole bunch of frameworks.","I'm a great problem solver and critical thinker"]}
     ,
     {"tag": "projects",
     "patterns": ["projects","what are you passionate about","what are your passions","what are your interests","tell me about what you enjoy","what kinds of technology do you like","what projects do you do","show me your projects",
@@ -46,7 +46,7 @@
     "patterns": ["about me","tell me about yourself","I want to know more about you","give me information about you","tell me something about you","please share about yourself",
     "may i know more about you","could you share with me your personal information","i want the information on you","I'd like to learn more about you","I'd like to get to know you better",
     "I am interested in learning about you"],
-    "responses": ["I'm from Singapore","I'm a Comp Sci student at USC","I love going to the gym!", "My favorite food is paella!"]}
+    "responses": ["I'm from Singapore","I'm a Comp Sci student at USC","I'm a gymaholic, I'd workout everyday if I could", "I love watching food videos, but I love cooking and eating food even more."]}
     ,
     {"tag": "experience",
     "patterns": ["what are your work experiences","do you have work experience","i want to know your professional experience","explain your work life",
