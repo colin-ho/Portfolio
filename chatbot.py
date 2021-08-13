@@ -59,10 +59,10 @@ def get_pred(model,encoded_input):
 
 def get_response(intents_list, intents_json,message):
     if not intents_list:
-        return "Sorry, I cannot understand you"
+        return "Sorry, I cannot understand you",'confused'
     tag = intents_list[0][0]
     if tag == "confused":
-        return "Sorry, I cannot understand you"
+        return "Sorry, I cannot understand you",'confused'
     list_of_intents = intents_json['intents']
     for i in list_of_intents:
         if i['tag']==tag:
