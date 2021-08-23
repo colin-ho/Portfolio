@@ -55,6 +55,6 @@ def receive_email():
         header = "website"+" % "+email["name"]+" % "+email["email"""]
         msg = Message(subject=header,recipients=["colin.ho99@gmail.com"],body=email["message"])
         mail.send(msg)
-        return True
+        return {'status':True}
     except:
-        return False
+        return {'status':False}

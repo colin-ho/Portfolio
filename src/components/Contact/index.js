@@ -16,7 +16,7 @@ const ContactSection = ({lightBg,id,imgStart,topLine,lightText,headline,darkText
         setShowModal(prev=>!prev);
         setSuccess(prev=>!prev);
         setTimeout(()=>{
-            setSuccess(e);
+            setSuccess(prev=>!prev);
         },3000)
     }
 
