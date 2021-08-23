@@ -157,9 +157,8 @@ export const ContactModal = ({showModal,setShowModal,onEmail})=>{
                 name:name,email:email,message:message
             })
         }).then(data=>{
-            console.log(data)
-        });
-
+            console.log(data.message)
+        })
         setName("");
         setEmail("");
         setMessage("");
