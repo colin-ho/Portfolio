@@ -126,14 +126,12 @@ export const Img = styled.img`
 
 export const IconWrap1= styled.div`
     max-width:555px;
-    display:flex;
     justify-content: center;
-    opacity:${({showModal})=>(showModal ? 0:1)};
+    display:${({showModal})=>(showModal ? 'none':'flex')};
 `
 
 export const IconWrap2= styled.div`
     max-width:555px;
-    display:flex;
     flex-direction:row;
     justify-content:space-around;
     margin-top:150px;
@@ -141,7 +139,7 @@ export const IconWrap2= styled.div`
         margin-top:120px;
     }
     margin-bottom:50px;
-    opacity:${({showModal})=>(showModal ? 0:1)};
+    display:${({showModal})=>(showModal ? 'none':'flex')};
 `
 
 export const IconWrap3= styled.div`
