@@ -147,6 +147,7 @@ export const ContactModal = ({showModal,setShowModal,onEmail})=>{
     const [email, setEmail] = useState("");
     const [message, setMessage] = useState("");
 
+
     const SubmitHandler = e =>{
         fetch("/email", {
             method: "POST",
@@ -156,13 +157,12 @@ export const ContactModal = ({showModal,setShowModal,onEmail})=>{
             body: JSON.stringify({
                 name:name,email:email,message:message
             })
-        }).then(data=>{
-            console.log(data.message)
         })
         setName("");
         setEmail("");
-        setMessage("");
-        onEmail(true);    
+        setMessage("");  
+        onEmail(true)
+        
     }
 
     return (

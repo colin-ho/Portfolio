@@ -12,11 +12,11 @@ const ContactSection = ({lightBg,id,imgStart,topLine,lightText,headline,darkText
         setShowModal(prev=>!prev);
     }
 
-    const sent = e =>{
+    const sent = (e) =>{
         setShowModal(prev=>!prev);
         setSuccess(prev=>!prev);
         setTimeout(()=>{
-            setSuccess(prev=>!prev);
+            setSuccess(prev=>!prev);  
         },3000)
     }
 
@@ -25,7 +25,7 @@ const ContactSection = ({lightBg,id,imgStart,topLine,lightText,headline,darkText
     return (
         <>
             <InfoContainer lightBg={lightBg} id={id}>
-            <ContactModal showModal={showModal} setShowModal={setShowModal} onEmail={e=>sent(e)}></ContactModal>
+            <ContactModal showModal={showModal} setShowModal={setShowModal} onEmail={sent}></ContactModal>
                 <InfoWrapper>
                     <InfoRow imgStart={imgStart}>
                         <Column1>
@@ -37,7 +37,7 @@ const ContactSection = ({lightBg,id,imgStart,topLine,lightText,headline,darkText
                                 {headline}
                             </Heading>
                             <Subtitle darkText={darkText}>
-                                {success ? ("Thank you, your message has been sent"):description}
+                                {success ? ("Thank you, your message has been sent"): description}
                             </Subtitle>
                             <BtnWrap>
                                 <Button to="/" onClick={openModal} primary={primary ? 1:0} dark = {dark ? 1:0} dark2={dark2 ? 1:0}>{buttonLabel}</Button>

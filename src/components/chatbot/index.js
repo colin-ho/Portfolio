@@ -70,6 +70,7 @@ export const PopChat = ( props ) => {
       },
       body: JSON.stringify(input)
     }).then(res => res.json()).then(data => {
+        console.log(data)
         check(data.message)
         setOption(data.tag)
       });
