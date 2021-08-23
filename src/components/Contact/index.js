@@ -37,7 +37,7 @@ const ContactSection = ({lightBg,id,imgStart,topLine,lightText,headline,darkText
                                 {headline}
                             </Heading>
                             <Subtitle darkText={darkText}>
-                                {success ? ("Thank you, your message has been sent"): description}
+                                {success ? <div style={{color:'green'}}>Thank you, your message has been sent</div>: description}
                             </Subtitle>
                             <BtnWrap>
                                 <Button to="/" onClick={openModal} primary={primary ? 1:0} dark = {dark ? 1:0} dark2={dark2 ? 1:0}>{buttonLabel}</Button>
