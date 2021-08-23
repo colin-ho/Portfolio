@@ -45,7 +45,7 @@ export const PopChat = ( props ) => {
     if (response){
       get(['user','Yes'])
       if (option === 'education' || option ==='experience'){
-        get(['link','<a href="https://drive.google.com/uc?export=view&id=1QSVC4S5uB8WVSmjafAhAkpNMqnJFYZKQ" target="_blank">Resume</a>'])
+        get(['link','<a href="https://drive.google.com/uc?export=view&id=1rWpx465s9uKLLCegrlMQWi1PPjaLDBtI" target="_blank">Resume</a>'])
       }
       if (option === 'skills'){
         get(['scroll','skills'])
