@@ -16,7 +16,7 @@ const ContactSection = ({lightBg,id,imgStart,topLine,lightText,headline,darkText
         setShowModal(prev=>!prev);
         setSuccess(prev=>!prev);
         setTimeout(()=>{
-            setSuccess(prev=>!prev);
+            setSuccess(e);
         },3000)
     }
 
@@ -37,7 +37,7 @@ const ContactSection = ({lightBg,id,imgStart,topLine,lightText,headline,darkText
                                 {headline}
                             </Heading>
                             <Subtitle darkText={darkText}>
-                                {success? ("Thank you, your message has been sent"):description}
+                                {success ? ("Thank you, your message has been sent"):description}
                             </Subtitle>
                             <BtnWrap>
                                 <Button to="/" onClick={openModal} primary={primary ? 1:0} dark = {dark ? 1:0} dark2={dark2 ? 1:0}>{buttonLabel}</Button>

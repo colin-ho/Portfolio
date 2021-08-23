@@ -156,11 +156,17 @@ export const ContactModal = ({showModal,setShowModal,onEmail})=>{
             body: JSON.stringify({
                 name:name,email:email,message:message
             })
+        }).then(data=>data.json).then(data=>{
+            setName("");
+            setEmail("");
+            setMessage("");
+            if (data){
+                onEmail(true);  
+            } else{
+                onEmail(false);
+            }
         });
-        setName("");
-        setEmail("");
-        setMessage("");
-        onEmail(1);    
+          
     }
 
     return (

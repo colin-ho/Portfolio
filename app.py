@@ -50,9 +50,11 @@ def get_input():
 
 @app.route('/email',methods=["POST"])
 def receive_email():
-    email=request.get_json()
-    header = "website"+" % "+email["name"]+" % "+email["email"""]
-    msg = Message(subject=header,recipients=["colin.ho99@gmail.com"],body=email["message"])
-    mail.send(msg)
-    response='Your message has been sent.'
-    return {'message':response}
+    try:
+        email=request.get_json()
+        header = "website"+" % "+email["name"]+" % "+email["email"""]
+        msg = Message(subject=header,recipients=["colin.ho99@gmail.com"],body=email["message"])
+        mail.send(msg)
+        return True
+    except:
+        return False
