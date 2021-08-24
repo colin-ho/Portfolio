@@ -3,7 +3,6 @@ import {FaBars} from 'react-icons/fa'
 import {IconContext} from 'react-icons/lib'
 import {animateScroll as scroll} from 'react-scroll';
 import {NavBtn,NavBtnLink,Nav, NavbarContainer,NavLogo,MobileIcon,NavMenu,NavItem,NavLinks} from './NavbarElements';
-import resume from '../../files/Colin Ho Resume.pdf'
 
 const Navbar = ({toggle}) => {
     const [scrollNav,setScrollNav]=useState(false)
@@ -48,7 +47,7 @@ const Navbar = ({toggle}) => {
                         </NavItem>
                     </NavMenu>
                     <NavBtn>
-                        <NavBtnLink href={resume} target="_blank" > View Resume</NavBtnLink>
+                        <NavBtnLink href="https://drive.google.com/uc?export=view&id=1rWpx465s9uKLLCegrlMQWi1PPjaLDBtI" target="_blank" > View Resume</NavBtnLink>
                     </NavBtn>
                 </NavbarContainer>
             </Nav>
