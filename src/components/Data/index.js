@@ -5,7 +5,7 @@ export const homeObjOne = {
     lightTextDesc:false,
     topLine:'About me',
     headline: 'Hey there!',
-    description: 'I\'m Colin. Currently a sophomore at the University of Southern California studying computer engineering and computer science. I am an aspiring software engineer with passion in AI and Web Development. ',
+    description: 'I\'m Colin. Currently a sophomore at the University of Southern California studying computer science. I am an aspiring software engineer with passion in AI and Web Development. ',
     buttonLabel:'See my work',
     imgStart: false,
     alt: 'Car',
