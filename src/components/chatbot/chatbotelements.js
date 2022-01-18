@@ -162,3 +162,26 @@ export const Option = styled.button`
         color: #0D1821;
     }
 `
+
+export const Loading = styled.div`
+    font-size: 14px;
+
+    &:after{
+      overflow: hidden;
+      display: inline-block;
+      -webkit-animation: ellipsis steps(4,end) 1500ms infinite;      
+      animation: ellipsis steps(4,end) 1500ms infinite;
+      content: "...";
+      width: 0px;
+    }
+    @keyframes ellipsis {
+      to {
+        width: 1.5em;    
+      }
+    }
+    
+    @-webkit-keyframes ellipsis {
+      to {
+        width: 1.5em;    
+      }
+`

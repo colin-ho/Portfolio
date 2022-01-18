@@ -1,10 +1,10 @@
 import React, { useRef,useState,useEffect} from 'react'
 import './chatbotelements.js'
-import {Option,OptionArea, Icon,CloseIcon,PopCon,Chatcon,Chatbox,Header,MessageArea,Right,SpanLeft,SpanRight,Left,Footer,Input,Button,Pop,P,Open} from './chatbotelements'
+import {Option,OptionArea, Icon,CloseIcon,PopCon,Chatcon,Chatbox,Header,MessageArea,Right,SpanLeft,SpanRight,Left,Footer,Input,Button,Pop,P,Open,Loading} from './chatbotelements'
 import { Link as LinkS} from 'react-scroll'
 import {FaPaperPlane} from 'react-icons/fa'
 import {IoIosChatboxes} from 'react-icons/io'
-export const PopChat = ( props ) => {
+export const PopChat = ( {messages,get,remove} ) => {
 
   const [chatopen, setChatopen] = useState(false)
 
@@ -17,13 +17,9 @@ export const PopChat = ( props ) => {
     divRef.current.scrollIntoView({ behavior: 'smooth' });
   });
 
-  const messages = props.message
-
   const [text, setText] = useState("");
   const [question,setQuestion]=useState(false)
   const [option,setOption]=useState('')
-
-  const get = props.getMessage
 
   const check = (s2)=>{
     if (s2[0]==='bot'){
@@ -62,6 +58,7 @@ export const PopChat = ( props ) => {
   }
   const handle = (input) =>{
     get(['user',input])
+    get(['loading',''])
     setQuestion('temp')
     fetch("/input", {
       method: "POST",
@@ -70,6 +67,7 @@ export const PopChat = ( props ) => {
       },
       body: JSON.stringify(input)
     }).then(res => res.json()).then(data => {
+        remove();
         check(data.message)
         setOption(data.tag)
       });
@@ -100,6 +98,8 @@ export const PopChat = ( props ) => {
                 (<Right key={index}><SpanRight >{ item[1]}</SpanRight></Right>)
                 : item[0]==='bot' ? 
                 (<Left key={index}><SpanLeft>{ item[1] }</SpanLeft></Left>)
+                : item[0]==='loading' ? 
+                (<Left key={index}><Loading/></Left>)
                 : item[0]==='link' ?
                 (<Left key={index}><SpanLeft dangerouslySetInnerHTML={{ __html: item[1] }}></SpanLeft></Left>)
                 :

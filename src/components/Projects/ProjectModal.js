@@ -8,7 +8,7 @@ import Icon3 from '../../videos/1.gif'
 
 const Background = styled.div`
     width:100%;
-    height:739px;
+    height:calc(100vh - 80px);
     opacity:100%;
     margin-top:-18px;
     background:linear-gradient(180deg,rgba(0,0,0,0.2) 0%,rgba(0,0,0,0.6) 100%),

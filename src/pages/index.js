@@ -27,7 +27,8 @@ const Home = () => {
 
     return (
         <>
-            <PopChat message = {messages} getMessage={newmessage => setMessage(currentMessages => [...currentMessages,newmessage])}/>
+            <PopChat messages = {messages} get={newmessage => setMessage(currentMessages => [...currentMessages,newmessage])}
+            remove={()=>setMessage((messages) => messages.filter((_, i) => i !== messages.length - 1))}/>
             <Sidebar isOpen={isOpen} toggle={toggle}/>
             <Navbar toggle = {toggle}/>
             <HeroSection/>

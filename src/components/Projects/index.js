@@ -17,7 +17,6 @@ const Projects = () => {
     }
 
     return (
-        <>
         <ProjectsContainer id="projects">
             <ProjectModal showModal={showModal} setShowModal={setShowModal} data={data}></ProjectModal>
             <ProjectsH1>My Projects</ProjectsH1>
@@ -42,7 +41,6 @@ const Projects = () => {
                 <Button style ={{'width':'100px'}}to='skills' smooth="true" spy={true} exact="true" offset={-80} primary="1" dark = "0" dark2="0"><FaAngleDoubleDown/></Button>
             </BtnWrap>
         </ProjectsContainer>
-        </>
     )
 }
 

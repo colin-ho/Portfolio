@@ -28,7 +28,7 @@ const Navbar = ({toggle}) => {
         <IconContext.Provider value={{color:'#ededed'}}>
             <Nav scrollNav={scrollNav}>
                 <NavbarContainer>
-                    <NavLogo to="/" onClick={toggleHome}><img src="https://vectr.com/tmp/ctpCdYY0k/fTO8xiYW7.svg?width=220&height=220&select=fTO8xiYW7page0&quality=0.59"alt="" padding-right="100px" width="100" height="56"/></NavLogo>
+                    <NavLogo to="/" onClick={toggleHome}><img src="https://drive.google.com/uc?export=view&id=1DWMy5TPmlQurKaUzoYXc-0JNWsaLw6y9"alt="" width="70" height="70"/></NavLogo>
                     <MobileIcon onClick={toggle}>
                         <FaBars/>
                     </MobileIcon>
