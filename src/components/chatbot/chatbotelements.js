@@ -1,7 +1,7 @@
 import styled from 'styled-components'
-import {FaTimes} from 'react-icons/fa'
+import { FaTimes } from 'react-icons/fa'
 
-export const Chatcon =styled.div`
+export const Chatcon = styled.div`
 
   width: 320px;
   position: fixed;
@@ -9,8 +9,8 @@ export const Chatcon =styled.div`
   z-index:20;
   transition: 0.3s ease-in-out;
   margin-bottom:2%;
-  opacity: ${({chatopen}) => (chatopen ? '100%' : '0')};
-  bottom:${({chatopen})=>(chatopen ? '0': '-100%')};
+  opacity: ${({ chatopen }) => (chatopen ? '100%' : '0')};
+  bottom:${({ chatopen }) => (chatopen ? '0' : '-100%')};
 `
 
 export const Chatbox = styled.div`
@@ -87,7 +87,7 @@ export const Footer = styled.div`
     -ms-flex-pack: justify;
     justify-content: space-between;
 `
- 
+
 export const Input = styled.input`
     border: 1px solid #ededed;
     padding: 20px;
@@ -111,8 +111,8 @@ export const PopCon = styled.div`
   z-index:5;
   margin-bottom:25px;
   transition: 0.3s ease-in-out;
-  opacity: ${({chatopen}) => (chatopen ? '100%' : '0')};
-  bottom:${({chatopen})=>(chatopen ? '0': '-100%')};
+  opacity: ${({ chatopen }) => (chatopen ? '100%' : '0')};
+  bottom:${({ chatopen }) => (chatopen ? '0' : '-100%')};
 `
 export const Pop = styled.div`
     width: 100%;
@@ -123,7 +123,7 @@ export const Pop = styled.div`
 export const P = styled.p`
   text-align: right;
 `
-  
+
 export const Open = styled.button`
   background:transparent;
   outline:none;
@@ -133,7 +133,7 @@ export const Open = styled.button`
   cursor:pointer;
 `
 
-export const OptionArea=styled.div`
+export const OptionArea = styled.div`
   background-color: #eee;
   padding: 0px 10px 10px 0px;
   display: flex;
@@ -166,6 +166,19 @@ export const Option = styled.button`
 export const Loading = styled.div`
     font-size: 14px;
 
+    @-webkit-keyframes ellipsis {
+        to {
+            width: 1.5em;    
+        }
+    }
+
+    @keyframes ellipsis {
+        to {
+          width: 1.5em;    
+        }
+    }
+    
+
     &:after{
       overflow: hidden;
       display: inline-block;
@@ -174,14 +187,5 @@ export const Loading = styled.div`
       content: "...";
       width: 0px;
     }
-    @keyframes ellipsis {
-      to {
-        width: 1.5em;    
-      }
-    }
     
-    @-webkit-keyframes ellipsis {
-      to {
-        width: 1.5em;    
-      }
 `
