@@ -3,12 +3,12 @@ import { PopChat } from '../components/chatbot'
 import Footer from '../components/Footer'
 import HeroSection from '../components/HeroSection'
 import InfoSection from '../components/InfoSection'
-import { homeObjOne, homeObjThree, homeObjTwo } from '../components/Data/index'
+import { homeObjFour, homeObjOne, homeObjThree } from '../components/Data/index'
 import Navbar from '../components/Navbar'
 import Projects from '../components/Projects'
 import Sidebar from '../components/Sidebar'
-import SkillSection from '../components/Skills'
 import ContactSection from '../components/Contact'
+import ExperienceSection from '../components/Experience/Experience'
 
 const Home = () => {
     const [isOpen,setIsOpen] = useState(false)
@@ -33,8 +33,8 @@ const Home = () => {
             <Navbar toggle = {toggle}/>
             <HeroSection/>
             <InfoSection {...homeObjOne}/>
+            <ExperienceSection {...homeObjFour}/>
             <Projects/>
-            <SkillSection {...homeObjTwo}/>
             <ContactSection {...homeObjThree}/>
             <Footer/>
         </>

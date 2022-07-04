@@ -107,7 +107,7 @@ export const Button = styled.button`
 export const PopCon = styled.div`
   width: fit-content;
   position: fixed;
-  right: 30px;
+  right: 40px;
   z-index:20;
   margin-bottom:25px;
   transition: 0.3s ease-in-out;
@@ -128,7 +128,7 @@ export const Open = styled.button`
   background:transparent;
   outline:none;
   border:none;
-  font-size:50px;
+  font-size:70px;
   color:#B4CDED;
   cursor:pointer;
 `

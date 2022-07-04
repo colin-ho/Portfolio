@@ -1,18 +1,20 @@
 import styled from 'styled-components'
 
 export const ProjectsContainer = styled.div`
-    min-height:calc(100vh - 80px);
-    height: fit-content;
+    min-height:calc(100vh - 40px);
     display: flex;
     flex-direction: column;
     justify-content:center;
     align-items:center;
-    background: #0D1821;
+    background:${({showModal})=>(showModal ? 'linear-gradient(180deg,rgba(0,0,0,0.2) 0%,rgba(0,0,0,0.6) 100%),linear-gradient(180deg, rgba(0,0,0,0.2) 0%, transparent 100%)':'#ededed')};;
     -webkit-box-shadow: inset 0 20px 20px -20px rgba(0,0,0,0.8);
     -moz-box-shadow: inset 0 20px 20px -20px rgba(0,0,0,0.8);
     box-shadow: inset 0 20px 20px -20px rgba(0,0,0,0.8);
-    padding-top:100px;
-    padding-bottom:82px;
+    @media screen and (max-width:1020px){
+        padding-top:90px;
+        padding-bottom:90px;
+    }
+
 `;
 
 export const ProjectsWrapper = styled.div`
@@ -37,6 +39,7 @@ export const ProjectsCard = styled.button`
     align-items:center;
     border-radius:10px;
     margin:10px 15px;
+    background: #344966;
     padding:30px;
     transition: all 0.2s ease-in-out;
     outline:none;
@@ -60,9 +63,9 @@ export const ProjectsIcon = styled.img`
     border:2px solid black;
 `
 
-export const ProjectsH1=styled.h1`
+export const ProjectsH1 = styled.h1`
     font-size:48px;
-    color:#ededed;
+    color:#344966;
     margin-bottom:50px;
 
     @media screen and (max-width:480px){
@@ -70,7 +73,7 @@ export const ProjectsH1=styled.h1`
     }
 `
 
-export const ProjectsH2=styled.h2`
+export const ProjectsH2 = styled.h2`
     font-size:18px;
     margin-bottom:5px;
     margin-top:15px;

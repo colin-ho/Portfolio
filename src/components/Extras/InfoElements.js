@@ -17,7 +17,7 @@ export const InfoContainer = styled.div`
 export const InfoWrapper = styled.div`
     display: grid;
     z-index:3;
-    min-height: calc(100vh - 80px);
+    min-height: calc(100vh - 40px);
     height:fit-content;
     width:100%;
     max-width:1100px;
@@ -55,11 +55,12 @@ export const TextWrapper = styled.div`
     max-width: 540px;
     padding-top:0;
     padding-bottom:0px;
+    transition:all 0.3s ease-in-out;
 `;
 
 export const TopLine = styled.p`
     font-size:16px;
-    line-height:16px;
+    line-height:30px;
     font-weight:700;
     letter-spacing:1.4px;
     text-transform:uppercase;
@@ -91,11 +92,12 @@ export const List = styled.ul`
     max-width:440px;
     margin-bottom:35px;
     margin-left:24px;
-    font-size:18px;
-    line-height:24px;
+    font-size:16px;
+    line-height:30px;
     color:${({darkText})=>(darkText ? '#0D1821':'#ededed')};
 `
 export const LiItem = styled.li`
+    margin-bottom:10px;
 
 `
 export const BtnWrap = styled.div`
@@ -190,7 +192,7 @@ export const Icon2 = styled.a`
     font-size:44px;
     padding:10px;
     border-radius: 5%;
-    border:solid 5px #CAFFB9;
+    border:solid 5px #45d0af;
     animation: ${float} 3s linear infinite;
     &:hover{
         transition:all 0.3s ease-in-out;

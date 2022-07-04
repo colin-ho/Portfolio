@@ -8,7 +8,7 @@ const Footer = () => {
     return (
         <FooterContainer>
             <FooterWrap>
-                <SocialLogo to="/" onClick={toggleHome}>Back To Top</SocialLogo>
+                <SocialLogo to="/" onClick={toggleHome}>Back to top</SocialLogo>
                 <WebsiteRights>© {new Date().getFullYear()} | Built and designed by Colin Ho</WebsiteRights>
             </FooterWrap>
         </FooterContainer>

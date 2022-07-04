@@ -28,7 +28,7 @@ const Navbar = ({toggle}) => {
         <IconContext.Provider value={{color:'#ededed'}}>
             <Nav scrollNav={scrollNav}>
                 <NavbarContainer>
-                    <NavLogo to="/" onClick={toggleHome}><img src="https://drive.google.com/uc?export=view&id=1DWMy5TPmlQurKaUzoYXc-0JNWsaLw6y9"alt="" width="70" height="70"/></NavLogo>
+                    <NavLogo to="/" onClick={toggleHome}><img src="https://drive.google.com/uc?export=view&id=1DWMy5TPmlQurKaUzoYXc-0JNWsaLw6y9"alt="" width="65" height="70"/></NavLogo>
                     <MobileIcon onClick={toggle}>
                         <FaBars/>
                     </MobileIcon>
@@ -37,17 +37,17 @@ const Navbar = ({toggle}) => {
                             <NavLinks to="about" smooth={true} spy={true} exact='true' offset={-80}>About</NavLinks>
                         </NavItem>
                         <NavItem>
-                            <NavLinks to="projects"smooth={true} spy={true} exact='true' offset={-80} >Projects</NavLinks>
+                            <NavLinks to="experience" smooth={true} spy={true} exact='true' offset={-80} >Experience</NavLinks>
                         </NavItem>
                         <NavItem>
-                            <NavLinks to="skills"smooth={true} spy={true} exact='true' offset={-80} >Skills</NavLinks>
+                            <NavLinks to="projects"smooth={true} spy={true} exact='true' offset={-80} >Projects</NavLinks>
                         </NavItem>
                         <NavItem>
                             <NavLinks to="contact" smooth={true} spy={true} exact='true' offset={-80} >Contact</NavLinks>
                         </NavItem>
                     </NavMenu>
                     <NavBtn>
-                        <NavBtnLink href="https://drive.google.com/uc?export=view&id=1rWpx465s9uKLLCegrlMQWi1PPjaLDBtI" target="_blank" > View Resume</NavBtnLink>
+                        <NavBtnLink href="https://drive.google.com/uc?export=view&id=1rWpx465s9uKLLCegrlMQWi1PPjaLDBtI" target="_blank" >Resume</NavBtnLink>
                     </NavBtn>
                 </NavbarContainer>
             </Nav>

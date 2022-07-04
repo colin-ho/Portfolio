@@ -28,42 +28,42 @@
     "patterns": ["skills","what skills do you have","tell me about your skills","what is your tech stack","what languages are you proficient in","what are your techinical capabilities","share with me your coding skills",
     "what is your programming expertise","which programming languages are you good at","what kind of developer are you","what do you specialise in","i want to know your coding knowledge","what technological skills do you have"
     ,"which frameworks are you knowledgeable in","what are your strengths","where do your talents lie in","what are the things you are good at"],
-    "responses": ["I'm proficient in Python, C++, Javascript, and a whole bunch of frameworks.","I'm a great problem solver and critical thinker"]}
+    "responses": ["I'm proficient in Python, Go, Javascript, and a whole bunch of frameworks.","I'm a great problem solver and critical thinker"]}
     ,
     {"tag": "projects",
     "patterns": ["projects","what are you passionate about","what are your passions","what are your interests","tell me about what you enjoy","what kinds of technology do you like","what projects do you do","show me your projects",
     "showcase the projects that you work on","what do you like to work on","do you have any cool things to show",
     "show me examples of your code","can i see your codes","may i see the projects you have done","what are you curious about","which technologies interest you the most"],
-    "responses": ["My interests lie in web development and AI.","I'm passionate about AI and web development","I enjoy learning about new technologies, especially AI and web development."]}
+    "responses": ["I'm excited about emerging industries, especially blockchain and AI.","I've worked on several full-stack projects from AI chatbots to music recommenders."]}
     ,
     {"tag": "education",
     "patterns": ["education","what did you study","are you studying now","what is your degree","tell me your education levels","where did you go for university","which university are you currently in",
     "what are your educational qualifications","tell me your grades","i want to see your education","share with me your academic qualifications",
     "what is your major","what are you majoring in","are you majoring in something","are you a student","are you currently studying in school","where are you studying now"],
-    "responses": ["I'm studying Computer Science at USC.","I'm a second year CS student at the University of Southern California"]}
+    "responses": ["I'm studying Computer Science at USC.","I'm a third year CS student at the University of Southern California"]}
     ,
     {"tag": "about",
     "patterns": ["about me","tell me about yourself","I want to know more about you","give me information about you","tell me something about you","please share about yourself",
     "may i know more about you","could you share with me your personal information","i want the information on you","I'd like to learn more about you","I'd like to get to know you better",
     "I am interested in learning about you"],
-    "responses": ["I'm from Singapore","I'm a Comp Sci student at USC","I'm a gymaholic, I'd workout everyday if I could", "I love watching food videos, but I love cooking and eating food even more."]}
+    "responses": ["I'm from Singapore","I'm a Comp Sci student at USC","I'm a gymaholic, my goal is to be fit for life.", "I love watching food videos, but I love cooking and eating food even more."]}
     ,
     {"tag": "experience",
     "patterns": ["what are your work experiences","do you have work experience","i want to know your professional experience","explain your work life",
     "what employment experience do you have","what kind jobs have you had","did you have any jobs or internships before","please share your internship experiences with me",
     "please share your internship experiences with me","describe your internships to me","do you undertaken technical roles before","do you have experience in the workplace",
     "where have you worked before","where have you done internships before"],
-    "responses": ["I have project experience in AI and Web Development.","I am currently a front-end engineer intern at TAIGER."]}
+    "responses": ["I've done several software engineering internships, most recently at Coinbase.","I have project experience in machine learning and full-stack development.","My previous internships have spanned front-end engineering to back-end infrastructure and QA testing."]}
     ,
     {"tag": "contact",
     "patterns": ["email","what is your email","how can i contact you","what is your phone number","i want your email","tell me how to contact you",
     "please tell me your contact details","how do i get in touch with you","what is the best way to get in touch","how can i reach you",
     "what are your contact information","i want to talk to you more","give me your info on how to reach you"],
-    "responses": ["My email is colin.ho99@gmail.com"]}
+    "responses": ["My email is colin.ho99@gmail.com, feel free to email me!"]}
     ,
     {"tag": "media",
     "patterns": ["github","linked in","what is your github username","show me your github account","do you have a github","can i see your github","let me see your github repositories",
     "what is your linked in username","can i please have your linked in","take me to your linked in page","what is the link to your linked in","i want your links","show me your linked in profile","do you have a github account",
     "where is your github account"],
-    "responses": ["The link to my Github is github.com/colin-ho","My Linked-in profile is linkedin.com/in/colin-ho99/"]}
+    "responses": ["The link to my Github is github.com/colin-ho, feel free to look at my projects :)","My Linked-in profile is linkedin.com/in/colin-ho99/, please do connect with me!"]}
 ]} 
