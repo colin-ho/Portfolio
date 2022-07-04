@@ -40,11 +40,11 @@ export const PopChat = ( {messages,get,remove} ) => {
   const handleQuestion = (response) =>{
     if (response){
       get(['user','Yes'])
-      if (option === 'education' || option ==='experience'){
+      if (option === 'education' ){
         get(['link','<a href="https://drive.google.com/uc?export=view&id=1rWpx465s9uKLLCegrlMQWi1PPjaLDBtI" target="_blank">Resume</a>'])
       }
-      if (option === 'skills'){
-        get(['scroll','skills'])
+      if (option === 'skills'|| option ==='experience'){
+        get(['scroll','experience'])
       }
       if (option === 'projects'){
         get(['scroll','projects'])
