@@ -3,7 +3,7 @@ import { PopChat } from '../components/chatbot'
 import Footer from '../components/Footer'
 import HeroSection from '../components/HeroSection'
 import InfoSection from '../components/InfoSection'
-import { homeObjFour, homeObjOne, homeObjThree } from '../components/Data/index'
+import { homeObjOne, homeObjThree, homeObjTwo } from '../components/Data/index'
 import Navbar from '../components/Navbar'
 import Projects from '../components/Projects'
 import Sidebar from '../components/Sidebar'
@@ -33,7 +33,7 @@ const Home = () => {
             <Navbar toggle = {toggle}/>
             <HeroSection/>
             <InfoSection {...homeObjOne}/>
-            <ExperienceSection {...homeObjFour}/>
+            <ExperienceSection {...homeObjTwo}/>
             <Projects/>
             <ContactSection {...homeObjThree}/>
             <Footer/>

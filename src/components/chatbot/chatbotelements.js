@@ -108,7 +108,7 @@ export const PopCon = styled.div`
   width: fit-content;
   position: fixed;
   right: 40px;
-  z-index:20;
+  z-index:5;
   margin-bottom:25px;
   transition: 0.3s ease-in-out;
   opacity: ${({chatopen}) => (chatopen ? '100%' : '0')};

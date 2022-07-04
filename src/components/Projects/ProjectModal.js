@@ -33,16 +33,16 @@ const Background = styled.div`
 `
 const ModalWrapper = styled.div`
     width:728px;
-    height:fit-content;
     box-shadow: 0 5px 16px rgba(0,0,0,0.2);
     background:#ededed;
     color:#000;
     display:grid;
     grid-template-columns: 1fr 1fr;
     position:relative;
-    z-index: 10;
+    z-index: 20;
     border-radius: 10px;
     padding: 0px 0px;
+    overflow: scroll;
     @media screen and (max-width:1020px){
         top:150px;
         bottom:150px;
@@ -57,6 +57,9 @@ const ModalWrapper = styled.div`
     }
     @media screen and (max-width:480px){
         width:360px;
+    }
+    @media screen and (max-height:700px){
+        max-height:500px;
     }
     
 `

@@ -15,6 +15,7 @@ export const FooterWrap = styled.div`
     margin: 0 auto;
     @media screen and (max-width:820px){
         flex-direction:column;
+        padding: 46px;
     }
 `
 
@@ -31,7 +32,7 @@ export const SocialLogo = styled(Link)`
 
 export const WebsiteRights= styled.small`
     @media screen and (max-width:820px){
-        margin-top: 10px;
+        margin-top: 20px;
     }
     text-align: center;
     color:#ededed;

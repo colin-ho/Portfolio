@@ -15,19 +15,22 @@ export const homeObjOne = {
     destination:'experience'
 };
 
+
 export const homeObjTwo = {
-    id: 'skills',
-    lightBg: true,
-    lightText:false,
-    lightTextDesc:false,
-    topLine:'Skills',
-    headline: 'I am an engineer, and also a:',
-    buttonLabel:'Contact me',
+    id: 'experience',
+    lightBg: false,
+    lightText:true,
+    lightTextDesc:true,
+    topLine:'My experiences',
+    headline: 'Hey there!',
+    description: 'I\'m Colin. Currently a third-year computer science student at University of Southern California. I am an aspiring software engineer with passion in blockchain and AI. ',
+    buttonLabel:'See my projects',
     imgStart: false,
-    dark: false,
-    primary:false,
-    darkText:true,
-    destination:'contact'
+    alt: 'Car',
+    dark: true,
+    primary:true,
+    darkText:false,
+    destination:'projects'
 };
 
 export const homeObjThree = {
@@ -44,20 +47,3 @@ export const homeObjThree = {
     primary:true,
     darkText:false,
 }
-
-export const homeObjFour = {
-    id: 'experience',
-    lightBg: false,
-    lightText:true,
-    lightTextDesc:true,
-    topLine:'My experiences',
-    headline: 'Hey there!',
-    description: 'I\'m Colin. Currently a third-year computer science student at University of Southern California. I am an aspiring software engineer with passion in blockchain and AI. ',
-    buttonLabel:'See my projects',
-    imgStart: false,
-    alt: 'Car',
-    dark: true,
-    primary:true,
-    darkText:false,
-    destination:'projects'
-};
