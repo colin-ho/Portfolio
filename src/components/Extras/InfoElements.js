@@ -49,6 +49,9 @@ export const Column2 = styled.div`
     margin-bottom:15px;
     padding:0 15px;
     grid-area:col2;
+    @media screen and (max-width:768px){
+        margin-top:70px;
+    }
 `;
 
 export const TextWrapper = styled.div`
@@ -108,9 +111,6 @@ export const BtnWrap = styled.div`
 export const ImgWrap = styled.div`
     max-width:555px;
     height:100%;
-    @media screen and (max-width:768px){
-        padding-top: 70px;    
-    }
     display:flex;
     justify-content: center;
 `;

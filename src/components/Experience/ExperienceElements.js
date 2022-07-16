@@ -1,10 +1,13 @@
-import styled,{keyframes} from 'styled-components'
+import styled, { keyframes } from 'styled-components'
 
 export const ExperienceContainer = styled.div`
     display: flex;
     flex-direction: column;
     margin-top:40px;
     margin-bottom:50px;
+    @media screen and (max-width:768px){
+        margin-bottom:-20px;
+    }
     padding: 0 15px;
 `;
 
@@ -14,19 +17,19 @@ export const Experience = styled.div`
     font-size:16px;
     line-height:34px;
     margin-bottom:10px;
-    color:${({clicked})=>(clicked ? '#45d0af':'#ededed')};
+    color:${({ clicked }) => (clicked ? '#45d0af' : '#ededed')};
     cursor:pointer;
     transition:all 0.3s ease-in-out;
     &:hover{
         transition:all 0.3s ease-in-out;
         background-color: #344966;
     }
-    background-color:${({clicked})=>(clicked ? '#344966':'none')};
+    background-color:${({ clicked }) => (clicked ? '#344966' : 'none')};
 `
 
 export const Bar = styled.div`
     width:4px;
-    background-color:${({clicked})=>(clicked ? '#45d0af':'#ededed')};
+    background-color:${({ clicked }) => (clicked ? '#45d0af' : '#ededed')};
     transition: 0.3s ease-in-out;
     margin-right:10px;
 `
@@ -36,7 +39,7 @@ export const Subtitle = styled.p`
     margin-bottom:24px;
     font-size:16px;
     line-height:24px;
-    color:${({darkText})=>(darkText ? '#0D1821':'#ededed')};
+    color:${({ darkText }) => (darkText ? '#0D1821' : '#ededed')};
 `;
 
 const inout = keyframes`
@@ -51,3 +54,17 @@ export const ExperienceWrapper = styled.div`
     animation: ${inout} 1s;
 `
 
+export const ExperienceBtnWrap1 = styled.div`
+    display:flex;
+    @media screen and (max-width:768px){
+        display:none;
+    }
+`
+
+export const ExperienceBtnWrap2 = styled.div`
+    display:none;
+    margin-top:50px;
+    @media screen and (max-width:768px){
+        display:flex;
+    }
+`

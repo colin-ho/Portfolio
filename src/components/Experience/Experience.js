@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
 import { FaAngleDoubleDown } from 'react-icons/fa'
 import { Button } from '../Extras/ButtonElement'
-import { InfoContainer, InfoWrapper, InfoRow, Column1, TextWrapper, TopLine, Heading, Subtitle, BtnWrap, Column2,List, LiItem } from '../Extras/InfoElements.js'
-import { Bar, Experience, ExperienceContainer, ExperienceWrapper} from './ExperienceElements'
+import { InfoContainer, InfoWrapper, InfoRow, Column1, TextWrapper, TopLine, Heading, Subtitle, BtnWrap, Column2, List, LiItem } from '../Extras/InfoElements.js'
+import { Bar, Experience, ExperienceBtnWrap1, ExperienceBtnWrap2, ExperienceContainer, ExperienceWrapper } from './ExperienceElements'
 
-const ExperienceSection = ({ destination, lightBg, id, imgStart, topLine, lightText, darkText,  buttonLabel,  primary, dark, dark2 }) => {
+const ExperienceSection = ({ destination, lightBg, id, imgStart, topLine, lightText, darkText, buttonLabel, primary, dark, dark2 }) => {
 
     const [company, setCompany] = useState("Coinbase")
 
@@ -39,9 +39,11 @@ const ExperienceSection = ({ destination, lightBg, id, imgStart, topLine, lightT
                                         TAIGER
                                     </Experience>
                                 </ExperienceContainer>
-                                <BtnWrap>
-                                    <Button to={destination} smooth={true} spy={true} exact="true" offset={-80} primary={primary ? 1 : 0} dark={dark ? 1 : 0} dark2={dark2 ? 1 : 0}>{buttonLabel} <FaAngleDoubleDown style={{"margin-left":10}}/></Button>
-                                </BtnWrap>
+                                <ExperienceBtnWrap1>
+                                    <BtnWrap>
+                                        <Button to={destination} smooth={true} spy={true} exact="true" offset={-80} primary={primary ? 1 : 0} dark={dark ? 1 : 0} dark2={dark2 ? 1 : 0}>{buttonLabel} <FaAngleDoubleDown style={{ "margin-left": 10 }} /></Button>
+                                    </BtnWrap>
+                                </ExperienceBtnWrap1>
                             </TextWrapper>
                         </Column1>
                         <Column2>
@@ -49,6 +51,11 @@ const ExperienceSection = ({ destination, lightBg, id, imgStart, topLine, lightT
                                 : company === "CarbonLink" ? <CarbonLink darkText={darkText} />
                                     : company === "PunchCard" ? <PunchCard darkText={darkText} />
                                         : <Taiger darkText={darkText} />}
+                            <ExperienceBtnWrap2>
+                                <BtnWrap>
+                                    <Button to={destination} smooth={true} spy={true} exact="true" offset={-80} primary={primary ? 1 : 0} dark={dark ? 1 : 0} dark2={dark2 ? 1 : 0}>{buttonLabel} <FaAngleDoubleDown style={{ "margin-left": 10 }} /></Button>
+                                </BtnWrap>
+                            </ExperienceBtnWrap2>
                         </Column2>
                     </InfoRow>
                 </InfoWrapper>

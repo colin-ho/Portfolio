@@ -4,6 +4,7 @@ import {HeroContainer,HeroBg,Bg,HeroContent,HeroH1,HeroP,HeroH2,HeroBtnWrapper,A
 import{Button}from '../Extras/ButtonElement'
 const HeroSection = () => {
     const [hover,setHover]= useState(false)
+    const [height,setHeight]= useState("")
 
     const onHover = ()=>{
         setHover(!hover)
@@ -12,13 +13,14 @@ const HeroSection = () => {
     const handleScroll = () => setOffsetY(window.pageYOffset);
 
     useEffect(() => {
+        setHeight(window.innerHeight.toString()+"px")
         window.addEventListener("scroll", handleScroll);
 
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
 
     return (
-        <HeroContainer id = 'home'>
+        <HeroContainer id = 'home' height={height}>
             <HeroBg style={{ transform: `translateY(-${offsetY * 0.5}px)` }}>
                 <Bg src={background} />
             </HeroBg>
@@ -27,6 +29,7 @@ const HeroSection = () => {
                 <HeroH2> USC student. Aspiring software engineer. </HeroH2>
                 <HeroP>I built this portfolio website to showcase my work and skills. Hit the button below to get started.</HeroP>
                 <HeroBtnWrapper>
+                    {console.log(height)}
                     <Button to="about" onMouseEnter={onHover} onMouseLeave={onHover} primary="true" dark = "true" smooth={true} spy={true} exact='true' offset={-80}>
                         About me{hover ? <ArrowForward/>: <ArrowRight/>}
                     </Button>
