@@ -59,7 +59,7 @@ const ModalWrapper = styled.div`
         width:360px;
     }
     @media screen and (max-width:768px){
-        max-height:${({height})=>height};
+        max-height:500px;
     }
     
 `
@@ -198,9 +198,9 @@ export const ProjectModal = ({ showModal, setShowModal, data,height }) => {
     return (
         <>
             {showModal ? (
-                <Background ref={modalRef} onClick={closeModal} height={(height-40).toString()+"px"}>
+                <Background ref={modalRef} onClick={closeModal} height={height}>
                     {matchMedia('only screen and (max-width: 1020px)').matches ?
-                        <ModalWrapper showModal={showModal} height={(height-330).toString()+"px"}>
+                        <ModalWrapper showModal={showModal}>
                             <ModalImg src={img} />
                             <ModalContent>
                                 <h2>{title}</h2>
@@ -211,7 +211,7 @@ export const ProjectModal = ({ showModal, setShowModal, data,height }) => {
                         </ModalWrapper>
                         :
                         <animated.div style={animation}>
-                            <ModalWrapper showModal={showModal} height={(height-330).toString()+"px"}>
+                            <ModalWrapper showModal={showModal}>
                                 <ModalImg src={img} />
                                 <ModalContent>
                                     <h1>{title}</h1>

@@ -19,7 +19,7 @@ const Projects = ({height}) => {
 
     return (
         <ProjectsContainer id="projects" showModal={showModal} height={(height-40).toString()+"px"}>
-            <ProjectModal showModal={showModal} setShowModal={setShowModal} data={data} height={height}></ProjectModal>
+            <ProjectModal showModal={showModal} setShowModal={setShowModal} data={data} height={(height-40).toString()+"px"}></ProjectModal>
             <TopLine darkText={true}>
                 My Projects
             </TopLine>
