@@ -17,7 +17,7 @@ export const InfoContainer = styled.div`
 export const InfoWrapper = styled.div`
     display: grid;
     z-index:3;
-    min-height: calc(100vh - 40px);
+    min-height: ${({height})=>height};
     height:fit-content;
     width:100%;
     max-width:1100px;

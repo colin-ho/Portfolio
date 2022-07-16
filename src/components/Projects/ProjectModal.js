@@ -8,7 +8,7 @@ import Icon3 from '../../videos/1.gif'
 
 const Background = styled.div`
     width:100%;
-    height:calc(100vh - 40px);
+    height: ${({height})=>height};
     opacity:100%;
     background:transparent;
     position:absolute;
@@ -133,7 +133,7 @@ const CloseModalButton = styled(MdClose)`
     z-index: 10;
 `
 
-export const ProjectModal = ({ showModal, setShowModal, data }) => {
+export const ProjectModal = ({ showModal, setShowModal, data,height }) => {
 
     var img, title, para, link;
 
@@ -198,7 +198,7 @@ export const ProjectModal = ({ showModal, setShowModal, data }) => {
     return (
         <>
             {showModal ? (
-                <Background ref={modalRef} onClick={closeModal}>
+                <Background ref={modalRef} onClick={closeModal} height={height}>
                     {matchMedia('only screen and (max-width: 1020px)').matches ?
                         <ModalWrapper showModal={showModal}>
                             <ModalImg src={img} />

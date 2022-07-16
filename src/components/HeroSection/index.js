@@ -2,9 +2,8 @@ import React,{useState,useEffect} from 'react'
 import background from '../../images/bg5.jpg'
 import {HeroContainer,HeroBg,Bg,HeroContent,HeroH1,HeroP,HeroH2,HeroBtnWrapper,ArrowForward,ArrowRight} from './HeroElements'
 import{Button}from '../Extras/ButtonElement'
-const HeroSection = () => {
+const HeroSection = ({height}) => {
     const [hover,setHover]= useState(false)
-    const [height,setHeight]= useState("")
 
     const onHover = ()=>{
         setHover(!hover)
@@ -13,14 +12,13 @@ const HeroSection = () => {
     const handleScroll = () => setOffsetY(window.pageYOffset);
 
     useEffect(() => {
-        setHeight(window.innerHeight.toString()+"px")
         window.addEventListener("scroll", handleScroll);
 
         return () => window.removeEventListener("scroll", handleScroll);
     }, []);
 
     return (
-        <HeroContainer id = 'home' height={height}>
+        <HeroContainer id = 'home' height={height.toString()+"px"}>
             <HeroBg style={{ transform: `translateY(-${offsetY * 0.5}px)` }}>
                 <Bg src={background} />
             </HeroBg>

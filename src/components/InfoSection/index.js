@@ -4,12 +4,12 @@ import { InfoContainer,InfoWrapper,InfoRow,Column1,TextWrapper,TopLine,Heading,S
 import profile from '../../images/0.jpg'
 import { FaAngleDoubleDown } from 'react-icons/fa'
 
-const InfoSection = ({destination,lightBg,id,imgStart,topLine,lightText,headline,darkText,description,buttonLabel,alt,primary,dark,dark2}) => {
+const InfoSection = ({destination,lightBg,id,imgStart,topLine,lightText,headline,darkText,description,buttonLabel,alt,primary,dark,dark2,height}) => {
 
     return (
         <> 
             <InfoContainer lightBg={lightBg} id={id}>
-                <InfoWrapper>
+                <InfoWrapper height={(height-40).toString()+"px"}>
                     <InfoRow imgStart={imgStart}>
                         <Column1>
                         <TextWrapper>

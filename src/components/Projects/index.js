@@ -8,7 +8,7 @@ import img2 from '../../images/2.png'
 import img3 from '../../images/3.png'
 import { FaAngleDoubleDown } from 'react-icons/fa'
 
-const Projects = () => {
+const Projects = ({height}) => {
     const [showModal, setShowModal] = useState(false);
     const [data, setData] = useState(0);
 
@@ -18,8 +18,8 @@ const Projects = () => {
     }
 
     return (
-        <ProjectsContainer id="projects" showModal={showModal}>
-            <ProjectModal showModal={showModal} setShowModal={setShowModal} data={data}></ProjectModal>
+        <ProjectsContainer id="projects" showModal={showModal} height={(height-40).toString()+"px"}>
+            <ProjectModal showModal={showModal} setShowModal={setShowModal} data={data} height={(height-40).toString()+"px"}></ProjectModal>
             <TopLine darkText={true}>
                 My Projects
             </TopLine>

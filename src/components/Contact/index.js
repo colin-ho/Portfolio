@@ -5,7 +5,7 @@ import { Button } from '../Extras/ButtonElement'
 import { InfoContainer,InfoWrapper,InfoRow,Column1,TextWrapper,TopLine,Heading,Subtitle,BtnWrap,Column2,IconWrap1,Icon1,IconWrap2,Icon2,Icon3} from '../Extras/InfoElements'
 import {ContactModal} from './ContactModal'
 
-const ContactSection = ({lightBg,id,imgStart,topLine,lightText,headline,darkText,description,buttonLabel,primary,dark,dark2}) => {
+const ContactSection = ({lightBg,id,imgStart,topLine,lightText,headline,darkText,description,buttonLabel,primary,dark,dark2,height}) => {
     const [showModal,setShowModal]=useState(false);
 
     const openModal=e=>{
@@ -26,7 +26,7 @@ const ContactSection = ({lightBg,id,imgStart,topLine,lightText,headline,darkText
         <>
             <InfoContainer lightBg={lightBg} id={id}>
             <ContactModal showModal={showModal} setShowModal={setShowModal} onEmail={sent}></ContactModal>
-                <InfoWrapper>
+                <InfoWrapper height={(height-40).toString()+"px"}>
                     <InfoRow imgStart={imgStart}>
                         <Column1>
                         <TextWrapper>

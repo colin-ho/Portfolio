@@ -4,14 +4,14 @@ import { Button } from '../Extras/ButtonElement'
 import { InfoContainer, InfoWrapper, InfoRow, Column1, TextWrapper, TopLine, Heading, Subtitle, BtnWrap, Column2, List, LiItem } from '../Extras/InfoElements.js'
 import { Bar, Experience, ExperienceBtnWrap1, ExperienceBtnWrap2, ExperienceContainer, ExperienceWrapper } from './ExperienceElements'
 
-const ExperienceSection = ({ destination, lightBg, id, imgStart, topLine, lightText, darkText, buttonLabel, primary, dark, dark2 }) => {
+const ExperienceSection = ({ destination, lightBg, id, imgStart, topLine, lightText, darkText, buttonLabel, primary, dark, dark2,height }) => {
 
     const [company, setCompany] = useState("Coinbase")
 
     return (
         <>
             <InfoContainer lightBg={lightBg} id={id}>
-                <InfoWrapper>
+                <InfoWrapper height={(height-40).toString()+"px"}>
                     <InfoRow imgStart={imgStart}>
                         <Column1>
                             <TextWrapper>

@@ -12,6 +12,7 @@ import ExperienceSection from '../components/Experience/Experience'
 
 const Home = () => {
     const [isOpen,setIsOpen] = useState(false)
+    const [height,setHeight]= useState(0)
 
     const toggle = () =>{
         setIsOpen(!isOpen)
@@ -20,6 +21,7 @@ const Home = () => {
     const [messages, setMessage] = useState([]);
     
     useEffect(() => {
+        setHeight(window.innerHeight)
         fetch('/message').then(res => res.json()).then(data => {
         setMessage(data.message);
         });
@@ -31,11 +33,11 @@ const Home = () => {
             remove={()=>setMessage((messages) => messages.filter((_, i) => i !== messages.length - 1))}/>
             <Sidebar isOpen={isOpen} toggle={toggle}/>
             <Navbar toggle = {toggle}/>
-            <HeroSection/>
-            <InfoSection {...homeObjOne}/>
-            <ExperienceSection {...homeObjTwo}/>
-            <Projects/>
-            <ContactSection {...homeObjThree}/>
+            <HeroSection height={height}/>
+            <InfoSection height={height} {...homeObjOne}/>
+            <ExperienceSection height={height} {...homeObjTwo}/>
+            <Projects height={height}/>
+            <ContactSection height={height} {...homeObjThree}/>
             <Footer/>
         </>
     )
