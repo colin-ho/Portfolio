@@ -1,5 +1,4 @@
 from flask import Flask, request, send_from_directory
-from chatbot import chat
 from flask_mail import Mail,Message
 import os
 from langchain.vectorstores import Pinecone
