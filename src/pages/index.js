@@ -17,20 +17,14 @@ const Home = () => {
     const toggle = () =>{
         setIsOpen(!isOpen)
     }
-
-    const [messages, setMessage] = useState([]);
     
     useEffect(() => {
         setHeight(window.innerHeight)
-        fetch('/message').then(res => res.json()).then(data => {
-        setMessage(data.message);
-        });
     }, []);
 
     return (
         <>
-            <PopChat messages = {messages} get={newmessage => setMessage(currentMessages => [...currentMessages,newmessage])}
-            remove={()=>setMessage((messages) => messages.filter((_, i) => i !== messages.length - 1))}/>
+            <PopChat/>
             <Sidebar isOpen={isOpen} toggle={toggle}/>
             <Navbar toggle = {toggle}/>
             <HeroSection height={height}/>

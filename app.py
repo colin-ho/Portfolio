@@ -2,6 +2,14 @@ from flask import Flask, request, send_from_directory
 from chatbot import chat
 from flask_mail import Mail,Message
 import os
+from langchain.vectorstores import Pinecone
+from langchain.embeddings.openai import OpenAIEmbeddings
+import pinecone
+from gptchat import get_chain
+
+pinecone.init(api_key=os.environ.get('PINECONE_API_KEY'), environment=os.environ.get('PINECONE_ENVIRONMENT'))
+embeddings = OpenAIEmbeddings()
+vectorstore = Pinecone.from_existing_index(index_name=os.environ.get('PINECONE_INDEX_NAME'), embedding=embeddings, namespace="pdf-test")
 
 app = Flask(__name__,static_url_path='', static_folder='build')
 
@@ -14,38 +22,19 @@ app.config['MAIL_USE_TLS'] = False
 app.config['MAIL_USE_SSL'] = True
 mail = Mail(app)
 
-s = [['bot','Hello! This chatbot is programmed to answer professional questions about me.'],['bot',"Select an option below, or type in your question."]]
-
 @app.route("/", defaults={'path':''})
 def serve(path):
     return send_from_directory(app.static_folder,'index.html')
 
-@app.route('/message')
-def get_message():
-    return {'message':s}
-
 @app.route('/input',methods=["POST"])
 def get_input():
-    message=request.get_json()
-    data,tag=chat(message)
-    response = ['bot',data]
-    if tag == 'about':
-        follow = ['bot','Ask again for different answers!']
-        return {'message':[response,follow],'tag':tag}
-    elif tag == 'skills' or tag =='experience':
-        follow = ['bot','Would you like to see more details?']
-        return {'message':[response,follow],'tag':tag}
-    elif tag =='projects':
-        follow = ['bot','Would you like to see my projects?']
-        return {'message':[response,follow],'tag':tag}
-    elif tag =='education':
-        follow = ['bot','Would you like to see my resume?']
-        return {'message':[response,follow],'tag':tag}
-    elif tag =='contact':
-        follow = ['bot','Feel free to send me an email!']
-        return {'message':[response,follow],'tag':tag}
-    else:
-        return {'message':response,'tag':tag}
+    qa_chain = get_chain(vectorstore)
+    data=request.get_json()
+    chat_history = []
+    for i in range(2,len(data['chat_history']),2):
+        chat_history.append((data['chat_history'][i][1],data['chat_history'][i+1][1]))
+    result = qa_chain({"question": data['question'], "chat_history": chat_history})
+    return {'message':result['answer']}
     
 
 @app.route('/email',methods=["POST"])

@@ -124,6 +124,7 @@ export const Img = styled.img`
     margin: 0 0 10px 0px;
     padding-right:0;
     outline:2px solid black;
+    border-radius: 10px;
 `
 
 export const IconWrap1= styled.div`

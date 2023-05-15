@@ -42,7 +42,7 @@ const Projects = ({height}) => {
                 </ProjectsCard>
             </ProjectsWrapper>
             <BtnWrap style={{ 'marginTop': '25px' }}>
-                <Button to='contact' smooth="true" spy={true} style={showModal ? {opacity:0.5}:{opacity:1}}  exact="true" offset={-80} primary={0} dark={0} dark2={1}>Contact me <FaAngleDoubleDown style={{"margin-left":10}}/></Button>
+                <Button to='contact' smooth="true" spy={true} style={showModal ? {opacity:0.5}:{opacity:1}}  exact="true" offset={-80} primary={0} dark={0} dark2={1}>Contact me <FaAngleDoubleDown style={{"marginLeft":10}}/></Button>
             </BtnWrap>
         </ProjectsContainer>
     )

@@ -27,7 +27,6 @@ const HeroSection = ({height}) => {
                 <HeroH2> USC student. Aspiring software engineer. </HeroH2>
                 <HeroP>I built this portfolio website to showcase my work and skills. Hit the button below to get started.</HeroP>
                 <HeroBtnWrapper>
-                    {console.log(height)}
                     <Button to="about" onMouseEnter={onHover} onMouseLeave={onHover} primary="true" dark = "true" smooth={true} spy={true} exact='true' offset={-80}>
                         About me{hover ? <ArrowForward/>: <ArrowRight/>}
                     </Button>

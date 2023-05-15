@@ -41,7 +41,7 @@ const ExperienceSection = ({ destination, lightBg, id, imgStart, topLine, lightT
                                 </ExperienceContainer>
                                 <ExperienceBtnWrap1>
                                     <BtnWrap>
-                                        <Button to={destination} smooth={true} spy={true} exact="true" offset={-80} primary={primary ? 1 : 0} dark={dark ? 1 : 0} dark2={dark2 ? 1 : 0}>{buttonLabel} <FaAngleDoubleDown style={{ "margin-left": 10 }} /></Button>
+                                        <Button to={destination} smooth={true} spy={true} exact="true" offset={-80} primary={primary ? 1 : 0} dark={dark ? 1 : 0} dark2={dark2 ? 1 : 0}>{buttonLabel} <FaAngleDoubleDown style={{ "marginLeft": 10 }} /></Button>
                                     </BtnWrap>
                                 </ExperienceBtnWrap1>
                             </TextWrapper>
@@ -53,7 +53,7 @@ const ExperienceSection = ({ destination, lightBg, id, imgStart, topLine, lightT
                                         : <Taiger darkText={darkText} />}
                             <ExperienceBtnWrap2>
                                 <BtnWrap>
-                                    <Button to={destination} smooth={true} spy={true} exact="true" offset={-80} primary={primary ? 1 : 0} dark={dark ? 1 : 0} dark2={dark2 ? 1 : 0}>{buttonLabel} <FaAngleDoubleDown style={{ "margin-left": 10 }} /></Button>
+                                    <Button to={destination} smooth={true} spy={true} exact="true" offset={-80} primary={primary ? 1 : 0} dark={dark ? 1 : 0} dark2={dark2 ? 1 : 0}>{buttonLabel} <FaAngleDoubleDown style={{ "marginLeft": 10 }} /></Button>
                                 </BtnWrap>
                             </ExperienceBtnWrap2>
                         </Column2>

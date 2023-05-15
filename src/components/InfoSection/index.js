@@ -29,7 +29,7 @@ const InfoSection = ({destination,lightBg,id,imgStart,topLine,lightText,headline
                                 When I'm not working, you can find me trying new and delicious foods, or getting a good workout at the gym.
                             </Subtitle>
                             <BtnWrap>
-                                <Button to={destination} smooth={true} spy={true} exact="true" offset={-80} primary={primary ? 1:0} dark = {dark ? 1:0} dark2={dark2 ? 1:0}>{buttonLabel} <FaAngleDoubleDown style={{"margin-left":10}}/></Button>
+                                <Button to={destination} smooth={true} spy={true} exact="true" offset={-80} primary={primary ? 1:0} dark = {dark ? 1:0} dark2={dark2 ? 1:0}>{buttonLabel} <FaAngleDoubleDown style={{"marginLeft":10}}/></Button>
                             </BtnWrap>
                         </TextWrapper>
                         </Column1>
