@@ -5,8 +5,8 @@ import { MdClose } from "react-icons/md";
 import Icon1 from "../../videos/3.gif";
 import Icon2 from "../../videos/2.gif";
 import Icon3 from "../../videos/1.gif";
-import PortalVid from "../../videos/portalvid.webp";
-import ShortUrlVid from "../../videos/short_url_vid.webp";
+import PortalVid from "../../videos/portalgif.gif";
+import ShortUrlVid from "../../images/short_url.png";
 import Compiler from "../../images/compiler.png";
 
 const Background = styled.div`
@@ -186,7 +186,7 @@ export const ProjectModal = ({ showModal, setShowModal, data, height }) => {
     title = "Short-URL";
     if (window.matchMedia("only screen and (max-width: 768px)").matches) {
       para =
-        "Convert long urls into short urls. With added backend complexity for a production-ready build";
+        "Convert long urls into short urls. With added backend complexity for a production-ready build, including Memcached and RabbtiMQ.";
     } else {
       para =
         "Convert long urls into short urls. With added backend complexity for a production-ready build, including: Memcached to cache url pairs for faster redirects, and RabbitMQ to asynchronously increment click count in database.";
