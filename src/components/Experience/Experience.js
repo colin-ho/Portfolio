@@ -74,11 +74,11 @@ const Coinbase = ({ darkText }) => {
                 June - August 2022
             </Subtitle>
             <List darkText={darkText}>
-                <LiItem>Building a Go testing framework to streamline integration and end-to-end testing in CI pipelines. </LiItem>
-                <LiItem>Developing a microservice to facilitate cross-border peer to peer crypto transactions.</LiItem>
+                <LiItem>Built an integration and E2E testing framework and test suite generator in Go for GRPC and REST microservices </LiItem>
+                <LiItem>Developed a microservice to facilitate cross-border peer to peer crypto transactions.</LiItem>
             </List>
             <Subtitle darkText={darkText}>
-                <span style={{ color: "#45d0af" }}>Skills:</span> Go, Software Engineering, QA Testing
+                <span style={{ color: "#45d0af" }}>Skills:</span> Go, AWS, GRPC, Docker, BuildKite
             </Subtitle>
         </ExperienceWrapper>
     )
@@ -91,11 +91,11 @@ const CarbonLink = ({ darkText }) => {
                 Software Developer <a style={{ color: "#45d0af", textDecoration: "none" }} rel="noreferrer" href="https://www.carbonlink.io/" target="_blank">@ CarbonLink</a>
             </TopLine>
             <Subtitle darkText={darkText}>
-                May 2022 - Present
+                May 2022 - Jan 2023
             </Subtitle>
             <List darkText={darkText}>
-                <LiItem>Constructing a carbon token exchange with NodeJS, Express, and PrimeTrust API. </LiItem>
-                <LiItem>Integrating Amazon RDS to faciliate scalable data storage. </LiItem>
+                <LiItem>Implemented a REST API in Express and Typescript to purchase carbon offset tokens including KLIMA and MCO2. </LiItem>
+                <LiItem>Designed an authentication and user management system using Passport.js, PostgreSQL, and AWS S3. </LiItem>
             </List>
             <Subtitle darkText={darkText}>
                 <span style={{ color: "#45d0af" }}>Skills:</span> TypeScript, React, NodeJS, Express, AWS, PostgreSQL
@@ -115,8 +115,7 @@ const PunchCard = ({ darkText }) => {
             </Subtitle>
             <List darkText={darkText}>
                 <LiItem>Developed a React Native app that allows customers to discover and purchase subscriptions from local businesses. </LiItem>
-                <LiItem>Constructed a REST API with NodeJS, Firebase, and Stripe
-                    to handle authentication, database, and payment processing.</LiItem>
+                <LiItem>Constructed service connections with Firebase and Stripe to simplify authentication, storage, and payments.</LiItem>
             </List>
             <Subtitle darkText={darkText}>
                 <span style={{ color: "#45d0af" }}>Skills:</span> Typescript, React Native, NodeJS, Firebase, Stripe
@@ -129,16 +128,15 @@ const Taiger = ({ darkText }) => {
     return (
         <ExperienceWrapper>
             <TopLine darkText={darkText}>
-                Front-end Engineer Intern <a style={{ color: "#45d0af", textDecoration: "none" }} rel="noreferrer" href="https://taiger.com/" target="_blank">@ TAIGER</a>
+                Software Engineer Intern <a style={{ color: "#45d0af", textDecoration: "none" }} rel="noreferrer" href="https://taiger.com/" target="_blank">@ TAIGER</a>
             </TopLine>
             <Subtitle darkText={darkText}>
                 October - December 2021
             </Subtitle>
             <List darkText={darkText}>
-                <LiItem>Produced an ROI calculator and data
-                    management evaluator using Javascript and HubSpot API. </LiItem>
+                <LiItem>Produced lead generation tools including an ROI calculator and data management evaluator using Javascript and HubSpot API. </LiItem>
                 <LiItem>Built an ontology simulator using D3.js to visualize the
-                    document processing capabilities of TAIGER’s proprietary NLP technology.</LiItem>
+                    document processing capabilities of TAIGER's proprietary NLP technology.</LiItem>
             </List>
             <Subtitle darkText={darkText}>
                 <span style={{ color: "#45d0af" }}>Skills:</span> Javascript, D3.js, HTML, CSS

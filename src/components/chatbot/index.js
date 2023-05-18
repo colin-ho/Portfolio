@@ -65,7 +65,7 @@ export const PopChat = () => {
           "bot",
           "Sorry, I'm a bit busy right now. Please try again later",
         ]);
-      } else if (res.status == 413) {
+      } else if (res.status === 413) {
         addMessage([
           "bot",
           "Sorry, your question is too long. Please try again.",
