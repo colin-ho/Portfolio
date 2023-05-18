@@ -9,12 +9,24 @@ import pinecone
 from gptchat import get_chain
 
 import gspread
-from oauth2client.service_account import ServiceAccountCredentials
 from datetime import datetime
 
+credentials = {
+  "type": "service_account",
+  "project_id": "resolute-planet-303211",
+  "private_key_id": os.environ.get('GOOGLE_PRIVATE_KEY_ID'),
+  "private_key": os.environ.get('GOOGLE_PRIVATE_KEY').replace('\\n', '\n'),
+  "client_email": "chatbot@resolute-planet-303211.iam.gserviceaccount.com",
+  "client_id": "106186810120306116112",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/chatbot%40resolute-planet-303211.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
+
 scope = ["https://spreadsheets.google.com/feeds",'https://www.googleapis.com/auth/spreadsheets',"https://www.googleapis.com/auth/drive.file","https://www.googleapis.com/auth/drive"]
-creds = ServiceAccountCredentials.from_json_keyfile_name("creds.json",scope)
-client = gspread.authorize(creds)
+client = gspread.service_account_from_dict(credentials,scope)
 sheet = client.open("Chatbot Data").sheet1   
 
 pinecone.init(api_key=os.environ.get('PINECONE_API_KEY'), environment=os.environ.get('PINECONE_ENVIRONMENT'))
