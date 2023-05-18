@@ -143,7 +143,7 @@ export const PopChat = () => {
               <OptionArea>
                 <Option
                   onClick={(e) => {
-                    handle("Tell me about Colin");
+                    handle("Who is Colin?");
                     setText("");
                   }}
                 >
@@ -159,23 +159,15 @@ export const PopChat = () => {
                 </Option>
                 <Option
                   onClick={(e) => {
-                    handle("Talk about Colin's skills");
+                    handle("What work experience does Colin have?");
                     setText("");
                   }}
                 >
-                  Skills
+                  Work Experience
                 </Option>
                 <Option
                   onClick={(e) => {
-                    handle("What work experience does Colin have");
-                    setText("");
-                  }}
-                >
-                  Experience
-                </Option>
-                <Option
-                  onClick={(e) => {
-                    handle("What are Colin's interests");
+                    handle("What are Colin's interests?");
                     setText("");
                   }}
                 >

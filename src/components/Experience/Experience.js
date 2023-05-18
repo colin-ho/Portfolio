@@ -71,7 +71,7 @@ const Coinbase = ({ darkText }) => {
                 Software Engineer Intern <a style={{ color: "#45d0af", textDecoration: "none" }} rel="noreferrer" href="https://www.coinbase.com/" target="_blank">@ Coinbase</a>
             </TopLine>
             <Subtitle darkText={darkText}>
-                June - August 2022
+                June 2022 - August 2022
             </Subtitle>
             <List darkText={darkText}>
                 <LiItem>Built an integration and E2E testing framework and test suite generator in Go for GRPC and REST microservices </LiItem>

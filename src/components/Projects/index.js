@@ -19,6 +19,8 @@ import short_url from "../../images/short_url.png";
 import compiler from "../../images/compiler.png";
 import { FaAngleDoubleDown } from "react-icons/fa";
 
+const projectsWithoutSources = new Set([6]);
+
 const Projects = ({ height }) => {
   const [showModal, setShowModal] = useState(false);
   const [data, setData] = useState(0);
@@ -39,6 +41,7 @@ const Projects = ({ height }) => {
         setShowModal={setShowModal}
         data={data}
         height={(height - 40).toString() + "px"}
+        noSource={projectsWithoutSources.has(data)}
       ></ProjectModal>
       <TopLine darkText={true}>My Projects</TopLine>
       <ProjectsH1>Stuff I've built</ProjectsH1>

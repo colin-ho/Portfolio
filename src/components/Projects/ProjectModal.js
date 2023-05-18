@@ -134,7 +134,13 @@ const CloseModalButton = styled(MdClose)`
   z-index: 10;
 `;
 
-export const ProjectModal = ({ showModal, setShowModal, data, height }) => {
+export const ProjectModal = ({
+  showModal,
+  setShowModal,
+  data,
+  height,
+  noSource,
+}) => {
   var img, title, para, link;
 
   if (data === 1) {
@@ -245,9 +251,11 @@ export const ProjectModal = ({ showModal, setShowModal, data, height }) => {
               <ModalContent>
                 <h2>{title}</h2>
                 <p style={{ margin: "10px 0px 30px 0px" }}>{para}</p>
-                <a href={link} rel="noopener noreferrer" target="_blank">
-                  Source
-                </a>
+                {!noSource && (
+                  <a href={link} rel="noopener noreferrer" target="_blank">
+                    Source
+                  </a>
+                )}
               </ModalContent>
               <CloseModalButton
                 aria-label="Close modal"
@@ -261,9 +269,11 @@ export const ProjectModal = ({ showModal, setShowModal, data, height }) => {
                 <ModalContent>
                   <h1>{title}</h1>
                   <p style={{ margin: "10px 0px 30px 0px" }}>{para}</p>
-                  <a href={link} rel="noopener noreferrer" target="_blank">
-                    Source
-                  </a>
+                  {!noSource && (
+                    <a href={link} rel="noopener noreferrer" target="_blank">
+                      Source
+                    </a>
+                  )}
                 </ModalContent>
                 <CloseModalButton
                   aria-label="Close modal"
