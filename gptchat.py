@@ -1,29 +1,23 @@
 from langchain.prompts.prompt import PromptTemplate
 from langchain.chat_models import ChatOpenAI
 from langchain.chains import ConversationalRetrievalChain
-from langchain.chains import LLMChain
-from langchain.chains.question_answering import load_qa_chain
-from langchain.chains.conversational_retrieval.prompts import CONDENSE_QUESTION_PROMPT
 
-template = """You are a helpful AI chatbot programmed to answer questions about Colin Ho. Use the following pieces of context to answer the question at the end.
-Make sure your answer is only one sentence long.
-If you don't know the answer, just say you don't know. DO NOT try to make up an answer.
-If the question is not related to Colin Ho, politely respond that you are tuned to only answer questions that are related to Colin Ho.
+template = """
+You are a helpful AI chatbot who is having a conversation with a human. Use the following pieces of context to reply to the human's message.
+Make sure your reply is only one sentence long.
+If the human is asking a question, and you don't know the answer, just say you don't know. DO NOT try to make up an answer.
 
 {context}
 
-Question: {question}
-Helpful answer in markdown:"""
+Message: {question}
+Reply:"""
 QA_PROMPT = PromptTemplate(template=template, input_variables=["question", "context"])
 
-
 def get_chain(vectorstore):
-    llm = ChatOpenAI(temperature=0.5,model_name='gpt-4')
-    doc_chain = load_qa_chain(llm=llm, chain_type="stuff", prompt=QA_PROMPT)
-    question_generator = LLMChain(llm=llm, prompt=CONDENSE_QUESTION_PROMPT)
-    qa_chain = ConversationalRetrievalChain(
+    llm = ChatOpenAI(temperature=0.5,model_name='gpt-3.5-turbo')
+    qa_chain = ConversationalRetrievalChain.from_llm(
+        llm = llm,
         retriever=vectorstore.as_retriever(),
-        combine_docs_chain=doc_chain,
-        question_generator=question_generator,
+        combine_docs_chain_kwargs = {'prompt':QA_PROMPT},
     )
     return qa_chain
