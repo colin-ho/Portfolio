@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { FaTimes } from "react-icons/fa";
 
 export const Chatcon = styled.div`
-  width: 320px;
+  width: 400px;
   position: fixed;
   right: 2%;
   z-index: 20;
@@ -10,15 +10,21 @@ export const Chatcon = styled.div`
   margin-bottom: 2%;
   opacity: ${({ chatopen }) => (chatopen ? "100%" : "0")};
   bottom: ${({ chatopen }) => (chatopen ? "0" : "-100%")};
+  @media screen and (max-width: 768px) {
+    width: 320px;
+  }
 `;
 
 export const Chatbox = styled.div`
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   width: 100%;
-  height: 500px;
+  height: 70vh;
   border-radius: 25px;
   background-color: #eee;
   overflow: hidden;
+  @media screen and (max-width: 768px) {
+    width: 320px;
+  }
 `;
 
 export const Header = styled.div`
@@ -47,7 +53,7 @@ export const MessageArea = styled.div`
   display: flex;
   flex-direction: column;
   overflow: scroll;
-  height: 370px;
+  height: calc(70vh - 130px);
   padding: 15px 15px 0px 15px;
 `;
 

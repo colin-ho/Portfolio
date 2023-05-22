@@ -63,8 +63,16 @@ def get_input():
         return 'Question too long', 413
     
     chat_history = []
-    for i in range(0,len(data['chat_history']),2):
-        chat_history.append((data['chat_history'][i][1],data['chat_history'][i+1][1]))
+    i = 0
+    while i < len(data['chat_history']):
+        userMessage = data['chat_history'][i][1]
+        i+=1
+        botMessage = ""
+        while i < len(data['chat_history']) and data['chat_history'][i][0] == 'bot':
+            botMessage += data['chat_history'][i][1]+" "
+            i+=1
+        chat_history.append((userMessage,botMessage))
+    print(chat_history)
     result = qa_chain({"question": data['question'], "chat_history": chat_history})
 
     logToSheets = [datetime.now().strftime("%m/%d/%Y, %H:%M:%S"),request.remote_addr,data['question'],result['answer']]

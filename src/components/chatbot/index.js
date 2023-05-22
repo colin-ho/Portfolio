@@ -72,7 +72,11 @@ export const PopChat = () => {
         ]);
       } else {
         const data = await res.json();
-        addMessage(["bot", data.message]);
+        const messages = data.message.split(". ");
+        messages.forEach((message) => {
+          if (message.charAt(message.length - 1) !== ".") message += ".";
+          addMessage(["bot", message]);
+        });
       }
     } catch (err) {
       addMessage(["bot", "Sorry, something went wrong. Please try again."]);
@@ -151,19 +155,19 @@ export const PopChat = () => {
                 </Option>
                 <Option
                   onClick={(e) => {
-                    handle("What are Colin's academic qualifications?");
-                    setText("");
-                  }}
-                >
-                  Education
-                </Option>
-                <Option
-                  onClick={(e) => {
                     handle("What work experience does Colin have?");
                     setText("");
                   }}
                 >
                   Work Experience
+                </Option>
+                <Option
+                  onClick={(e) => {
+                    handle("What are Colin's academic qualifications?");
+                    setText("");
+                  }}
+                >
+                  Education
                 </Option>
                 <Option
                   onClick={(e) => {
