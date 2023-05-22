@@ -73,7 +73,7 @@ def get_input():
             i+=1
         chat_history.append((userMessage,botMessage))
     result = qa_chain({"question": data['question'], "chat_history": chat_history})
-    logToSheets = [datetime.now().strftime("%m/%d/%Y, %H:%M:%S"),request.remote_addr,request.host,data['question'],result['answer']]
+    logToSheets = [datetime.now().strftime("%m/%d/%Y, %H:%M:%S"),request.remote_addr,data['question'],result['answer']]
     sheet.insert_row(logToSheets)
     return {'message':result['answer']}
     
