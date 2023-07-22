@@ -6,7 +6,7 @@ import { Bar, Experience, ExperienceBtnWrap1, ExperienceBtnWrap2, ExperienceCont
 
 const ExperienceSection = ({ destination, lightBg, id, imgStart, topLine, lightText, darkText, buttonLabel, primary, dark, dark2,height }) => {
 
-    const [company, setCompany] = useState("Coinbase")
+    const [company, setCompany] = useState("Stripe")
 
     return (
         <>
@@ -22,17 +22,17 @@ const ExperienceSection = ({ destination, lightBg, id, imgStart, topLine, lightT
                                     I've worked at
                                 </Heading>
                                 <ExperienceContainer>
+                                <Experience onClick={() => setCompany("Stripe")} clicked={company === "Stripe"}>
+                                        <Bar clicked={company === "Stripe"} />
+                                        Stripe
+                                    </Experience>
                                     <Experience onClick={() => setCompany("Coinbase")} clicked={company === "Coinbase"}>
                                         <Bar clicked={company === "Coinbase"} />
                                         Coinbase
                                     </Experience>
-                                    <Experience onClick={() => setCompany("CarbonLink")} clicked={company === "CarbonLink"}>
-                                        <Bar clicked={company === "CarbonLink"} />
-                                        CarbonLink
-                                    </Experience>
-                                    <Experience onClick={() => setCompany("PunchCard")} clicked={company === "PunchCard"}>
-                                        <Bar clicked={company === "PunchCard"} />
-                                        Punchcard
+                                    <Experience onClick={() => setCompany("Carbonlink")} clicked={company === "Carbonlink"}>
+                                        <Bar clicked={company === "Carbonlink"} />
+                                        Carbonlink
                                     </Experience>
                                     <Experience onClick={() => setCompany("Taiger")} clicked={company === "Taiger"}>
                                         <Bar clicked={company === "Taiger"} />
@@ -47,10 +47,10 @@ const ExperienceSection = ({ destination, lightBg, id, imgStart, topLine, lightT
                             </TextWrapper>
                         </Column1>
                         <Column2>
-                            {company === "Coinbase" ? <Coinbase darkText={darkText} />
-                                : company === "CarbonLink" ? <CarbonLink darkText={darkText} />
-                                    : company === "PunchCard" ? <PunchCard darkText={darkText} />
-                                        : <Taiger darkText={darkText} />}
+                            {company === "Stripe" ? <Stripe darkText={darkText}/> 
+                                : company === "Coinbase" ? <Coinbase darkText={darkText} />
+                                    : company === "Carbonlink" ? <Carbonlink darkText={darkText} />
+                                            : <Taiger darkText={darkText} />}
                             <ExperienceBtnWrap2>
                                 <BtnWrap>
                                     <Button to={destination} smooth={true} spy={true} exact="true" offset={-80} primary={primary ? 1 : 0} dark={dark ? 1 : 0} dark2={dark2 ? 1 : 0}>{buttonLabel} <FaAngleDoubleDown style={{ "marginLeft": 10 }} /></Button>
@@ -64,6 +64,26 @@ const ExperienceSection = ({ destination, lightBg, id, imgStart, topLine, lightT
     )
 }
 
+const Stripe = ({ darkText }) => {
+    return (
+        <ExperienceWrapper>
+            <TopLine darkText={darkText}>
+                Software Engineer Intern <a style={{ color: "#45d0af", textDecoration: "none" }} rel="noreferrer" href="https://www.stripe.com/" target="_blank">@ Stripe</a>
+            </TopLine>
+            <Subtitle darkText={darkText}>
+                May 2023 - August 2023
+            </Subtitle>
+            <List darkText={darkText}>
+                <LiItem>Designed and optimized Spark jobs in Scala and Python to export transactional data for reporting and user inquiries.</LiItem>
+                <LiItem>Implemented a feature to pay separate accounts, automating the billing of several manually billed users.</LiItem>
+            </List>
+            <Subtitle darkText={darkText}>
+                <span style={{ color: "#45d0af" }}>Skills:</span> Scala, Spark, Java, Python, Ruby
+            </Subtitle>
+        </ExperienceWrapper>
+    )
+}
+
 const Coinbase = ({ darkText }) => {
     return (
         <ExperienceWrapper>
@@ -74,8 +94,8 @@ const Coinbase = ({ darkText }) => {
                 June 2022 - August 2022
             </Subtitle>
             <List darkText={darkText}>
-                <LiItem>Built an integration and E2E testing framework and test suite generator in Go for GRPC and REST microservices </LiItem>
-                <LiItem>Developed a microservice to facilitate cross-border peer to peer crypto transactions.</LiItem>
+                <LiItem>Built an integration and E2E testing framework and test suite generator in Go for GRPC microservices </LiItem>
+                <LiItem>Developed a microservice to facilitate data collection for cross-border crypto transactions.</LiItem>
             </List>
             <Subtitle darkText={darkText}>
                 <span style={{ color: "#45d0af" }}>Skills:</span> Go, AWS, GRPC, Docker, BuildKite
@@ -84,11 +104,11 @@ const Coinbase = ({ darkText }) => {
     )
 }
 
-const CarbonLink = ({ darkText }) => {
+const Carbonlink = ({ darkText }) => {
     return (
         <ExperienceWrapper>
             <TopLine darkText={darkText}>
-                Software Developer <a style={{ color: "#45d0af", textDecoration: "none" }} rel="noreferrer" href="https://www.carbonlink.io/" target="_blank">@ CarbonLink</a>
+                Software Developer <a style={{ color: "#45d0af", textDecoration: "none" }} rel="noreferrer" href="https://www.carbonlink.io/" target="_blank">@ Carbonlink</a>
             </TopLine>
             <Subtitle darkText={darkText}>
                 May 2022 - Jan 2023
@@ -99,26 +119,6 @@ const CarbonLink = ({ darkText }) => {
             </List>
             <Subtitle darkText={darkText}>
                 <span style={{ color: "#45d0af" }}>Skills:</span> TypeScript, React, NodeJS, Express, AWS, PostgreSQL
-            </Subtitle>
-        </ExperienceWrapper>
-    )
-}
-
-const PunchCard = ({ darkText }) => {
-    return (
-        <ExperienceWrapper>
-            <TopLine darkText={darkText}>
-                Co-founder + Developer <a style={{ color: "#45d0af", textDecoration: "none" }} rel="noreferrer" href="https://www.punchcardapp.com/" target="_blank">@ Punchcard</a>
-            </TopLine>
-            <Subtitle darkText={darkText}>
-                December 2021 - May 2022
-            </Subtitle>
-            <List darkText={darkText}>
-                <LiItem>Developed a React Native app that allows customers to discover and purchase subscriptions from local businesses. </LiItem>
-                <LiItem>Constructed service connections with Firebase and Stripe to simplify authentication, storage, and payments.</LiItem>
-            </List>
-            <Subtitle darkText={darkText}>
-                <span style={{ color: "#45d0af" }}>Skills:</span> Typescript, React Native, NodeJS, Firebase, Stripe
             </Subtitle>
         </ExperienceWrapper>
     )
