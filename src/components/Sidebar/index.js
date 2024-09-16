@@ -23,7 +23,7 @@ const Sidebar = ({isOpen,toggle}) => {
                     </SidebarLink>
                 </SidebarMenu>
                 <SideBtnWrap>
-                    <SidebarRoute href="https://drive.google.com/uc?export=view&id=1rWpx465s9uKLLCegrlMQWi1PPjaLDBtI" target="_blank">
+                    <SidebarRoute href="https://drive.google.com/file/d/1vHVZrWaZmgk0tULD7ljuKxPp3-zkMilk/preview" target="_blank">
                         View Resume
                     </SidebarRoute>
                 </SideBtnWrap>

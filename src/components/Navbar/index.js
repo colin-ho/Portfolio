@@ -47,7 +47,7 @@ const Navbar = ({toggle}) => {
                         </NavItem>
                     </NavMenu>
                     <NavBtn>
-                        <NavBtnLink href="https://drive.google.com/uc?export=view&id=1rWpx465s9uKLLCegrlMQWi1PPjaLDBtI" target="_blank" >Resume</NavBtnLink>
+                        <NavBtnLink href="https://drive.google.com/file/d/1vHVZrWaZmgk0tULD7ljuKxPp3-zkMilk/preview" target="_blank" >Resume</NavBtnLink>
                     </NavBtn>
                 </NavbarContainer>
             </Nav>
