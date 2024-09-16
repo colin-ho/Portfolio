@@ -24,8 +24,8 @@ const HeroSection = ({height}) => {
             </HeroBg>
             <HeroContent>
                 <HeroH1>Hi, I'm Colin.</HeroH1>
-                <HeroH2> USC student. Aspiring software engineer. </HeroH2>
-                <HeroP>I built this portfolio website to showcase my work and skills. Hit the button below to get started.</HeroP>
+                <HeroH2>Software engineer @ <a href="https://www.eventual.com" target="_blank" rel="noopener noreferrer" style={{ color: 'white' }}>Eventual</a></HeroH2>
+                <HeroP>I'm passionate about building performant and scalable software systems.</HeroP>
                 <HeroBtnWrapper>
                     <Button to="about" onMouseEnter={onHover} onMouseLeave={onHover} primary="true" dark = "true" smooth={true} spy={true} exact='true' offset={-80}>
                         About me{hover ? <ArrowForward/>: <ArrowRight/>}

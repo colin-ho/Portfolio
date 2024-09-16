@@ -1,5 +1,4 @@
 import React,{useState,useEffect} from 'react'
-import { PopChat } from '../components/chatbot'
 import Footer from '../components/Footer'
 import HeroSection from '../components/HeroSection'
 import InfoSection from '../components/InfoSection'
@@ -24,7 +23,7 @@ const Home = () => {
 
     return (
         <>
-            <PopChat/>
+            {/* <PopChat/> */}
             <Sidebar isOpen={isOpen} toggle={toggle}/>
             <Navbar toggle = {toggle}/>
             <HeroSection height={height}/>

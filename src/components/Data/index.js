@@ -1,18 +1,18 @@
 export const homeObjOne = {
     id: 'about',
     lightBg: true,
-    lightText:false,
-    lightTextDesc:false,
-    topLine:'About me',
+    lightText: false,
+    lightTextDesc: false,
+    topLine: 'About me',
     headline: 'Nice to meet you!',
-    description: 'I\'m Colin. Currently a final year computer science student at University of Southern California. I am an aspiring software engineer with a passion for building things that make a difference.',
-    buttonLabel:'See my experiences',
+    description: 'I\'m Colin. Currently a software engineer at <a href="https://www.eventual.com" target="_blank" rel="noopener noreferrer">Eventual</a>, working on building a multimodal data warehouse for ML/AI, ETL, and analytics.',
+    buttonLabel: 'See my experiences',
     imgStart: false,
     alt: 'Car',
     dark: false,
-    primary:false,
-    darkText:true,
-    destination:'experience'
+    primary: false,
+    darkText: true,
+    destination: 'experience'
 };
 
 
@@ -40,7 +40,7 @@ export const homeObjThree = {
     lightTextDesc:true,
     topLine:'Contact Me',
     headline: 'Let\'s get in touch',
-    description: 'Use the links to get to my profiles, or click the button below to send me a message',
+    description: 'Always open to new connections and collaborations. Feel free to reach out!',
     buttonLabel:'Send an email',
     imgStart: false,
     dark: true,

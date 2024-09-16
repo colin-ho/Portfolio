@@ -3,7 +3,7 @@ import {FaBars} from 'react-icons/fa'
 import {IconContext} from 'react-icons/lib'
 import {animateScroll as scroll} from 'react-scroll';
 import {NavBtn,NavBtnLink,Nav, NavbarContainer,NavLogo,MobileIcon,NavMenu,NavItem,NavLinks} from './NavbarElements';
-
+import logo from "../../images/logo.webp"
 const Navbar = ({toggle}) => {
     const [scrollNav,setScrollNav]=useState(false)
 
@@ -28,7 +28,7 @@ const Navbar = ({toggle}) => {
         <IconContext.Provider value={{color:'#ededed'}}>
             <Nav scrollNav={scrollNav}>
                 <NavbarContainer>
-                    <NavLogo to="/" onClick={toggleHome}><img src="https://drive.google.com/uc?export=view&id=1DWMy5TPmlQurKaUzoYXc-0JNWsaLw6y9"alt="" width="65" height="70"/></NavLogo>
+                    <NavLogo to="/" onClick={toggleHome}><img src={logo} alt="" width="65" height="70"/></NavLogo>
                     <MobileIcon onClick={toggle}>
                         <FaBars/>
                     </MobileIcon>

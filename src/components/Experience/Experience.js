@@ -4,14 +4,14 @@ import { Button } from '../Extras/ButtonElement'
 import { InfoContainer, InfoWrapper, InfoRow, Column1, TextWrapper, TopLine, Heading, Subtitle, BtnWrap, Column2, List, LiItem } from '../Extras/InfoElements.js'
 import { Bar, Experience, ExperienceBtnWrap1, ExperienceBtnWrap2, ExperienceContainer, ExperienceWrapper } from './ExperienceElements'
 
-const ExperienceSection = ({ destination, lightBg, id, imgStart, topLine, lightText, darkText, buttonLabel, primary, dark, dark2,height }) => {
+const ExperienceSection = ({ destination, lightBg, id, imgStart, topLine, lightText, darkText, buttonLabel, primary, dark, dark2, height }) => {
 
-    const [company, setCompany] = useState("Stripe")
+    const [company, setCompany] = useState("Eventual")
 
     return (
         <>
             <InfoContainer lightBg={lightBg} id={id}>
-                <InfoWrapper height={(height-40).toString()+"px"}>
+                <InfoWrapper height={(height - 40).toString() + "px"}>
                     <InfoRow imgStart={imgStart}>
                         <Column1>
                             <TextWrapper>
@@ -22,7 +22,11 @@ const ExperienceSection = ({ destination, lightBg, id, imgStart, topLine, lightT
                                     I've worked at
                                 </Heading>
                                 <ExperienceContainer>
-                                <Experience onClick={() => setCompany("Stripe")} clicked={company === "Stripe"}>
+                                    <Experience onClick={() => setCompany("Eventual")} clicked={company === "Eventual"}>
+                                        <Bar clicked={company === "Eventual"} />
+                                        Eventual
+                                    </Experience>
+                                    <Experience onClick={() => setCompany("Stripe")} clicked={company === "Stripe"}>
                                         <Bar clicked={company === "Stripe"} />
                                         Stripe
                                     </Experience>
@@ -34,10 +38,6 @@ const ExperienceSection = ({ destination, lightBg, id, imgStart, topLine, lightT
                                         <Bar clicked={company === "Carbonlink"} />
                                         Carbonlink
                                     </Experience>
-                                    <Experience onClick={() => setCompany("Taiger")} clicked={company === "Taiger"}>
-                                        <Bar clicked={company === "Taiger"} />
-                                        TAIGER
-                                    </Experience>
                                 </ExperienceContainer>
                                 <ExperienceBtnWrap1>
                                     <BtnWrap>
@@ -47,10 +47,10 @@ const ExperienceSection = ({ destination, lightBg, id, imgStart, topLine, lightT
                             </TextWrapper>
                         </Column1>
                         <Column2>
-                            {company === "Stripe" ? <Stripe darkText={darkText}/> 
-                                : company === "Coinbase" ? <Coinbase darkText={darkText} />
-                                    : company === "Carbonlink" ? <Carbonlink darkText={darkText} />
-                                            : <Taiger darkText={darkText} />}
+                            {company === "Eventual" ? <Eventual darkText={darkText} />
+                                : company === "Stripe" ? <Stripe darkText={darkText} />
+                                    : company === "Coinbase" ? <Coinbase darkText={darkText} />
+                                        : <Carbonlink darkText={darkText} />}
                             <ExperienceBtnWrap2>
                                 <BtnWrap>
                                     <Button to={destination} smooth={true} spy={true} exact="true" offset={-80} primary={primary ? 1 : 0} dark={dark ? 1 : 0} dark2={dark2 ? 1 : 0}>{buttonLabel} <FaAngleDoubleDown style={{ "marginLeft": 10 }} /></Button>
@@ -61,6 +61,25 @@ const ExperienceSection = ({ destination, lightBg, id, imgStart, topLine, lightT
                 </InfoWrapper>
             </InfoContainer>
         </>
+    )
+}
+
+const Eventual = ({ darkText }) => {
+    return (
+        <ExperienceWrapper>
+            <TopLine darkText={darkText}>
+                Founding Engineer <a style={{ color: "#45d0af", textDecoration: "none" }} rel="noreferrer" href="https://www.eventualcomputing.com/" target="_blank">@ Eventual</a>
+            </TopLine>
+            <Subtitle darkText={darkText}>
+                January 2024 - Present
+            </Subtitle>
+            <List darkText={darkText}>
+                <LiItem>Developing a streaming execution engine to support multimodal data processing across ML/AI, ETL, and analytics.</LiItem>
+            </List>
+            <Subtitle darkText={darkText}>
+                <span style={{ color: "#45d0af" }}>Skills:</span> Rust, Python
+            </Subtitle>
+        </ExperienceWrapper>
     )
 }
 
@@ -123,7 +142,7 @@ const Carbonlink = ({ darkText }) => {
         </ExperienceWrapper>
     )
 }
-
+/*
 const Taiger = ({ darkText }) => {
     return (
         <ExperienceWrapper>
@@ -144,5 +163,6 @@ const Taiger = ({ darkText }) => {
         </ExperienceWrapper>
     )
 }
+*/
 
 export default ExperienceSection
